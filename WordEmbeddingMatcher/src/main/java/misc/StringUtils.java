@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,8 +14,13 @@ import org.apache.commons.io.FileUtils;
 //import org.apache.jena.ext.com.google.common.collect.ArrayListMultimap;
 //import org.apache.jena.ext.com.google.common.collect.Multimap;
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.StopAnalyzer;
+import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
+//import org.apache.lucene.analysis.core.StopAnalyzer;
+import org.apache.lucene.analysis.en.EnglishAnalyzer;
+import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.TermAttribute;
 import org.apache.lucene.util.Version;
@@ -96,6 +104,26 @@ public class StringUtils {
 		}
 
 		return result.trim();
+	}
+	
+	/**
+	 * Convert from a filename to a file URL.
+	 */
+	public static String convertToFileURL ( String filename )
+	{
+
+	    String path = new File ( filename ).getAbsolutePath ();
+	    if ( File.separatorChar != '/' )
+	    {
+	        path = path.replace ( File.separatorChar, '/' );
+	    }
+	    if ( !path.startsWith ( "/" ) )
+	    {
+	        path = "/" + path;
+	    }
+	    String retVal =  "file:" + path;
+
+	    return retVal;
 	}
 
 
@@ -259,7 +287,9 @@ public class StringUtils {
 		return stripped;
 	}
 
-	public static String removeStopWordsfromFile(File inputFile) throws IOException {
+/*	Compatibility problems with Lucene (from Alignment API) so commenting out these for now
+ * 
+ * public static String removeStopWordsfromFile(File inputFile) throws IOException {
 
 		StringBuilder tokens = new StringBuilder();
 
@@ -296,11 +326,53 @@ public class StringUtils {
 		String tokenizedText = tokens.toString();
 		return tokenizedText;
 
+	}*/
+	
+	public static String removeStopWordsFromString (String inputString) {
+
+		List<String> stopWordsList = Arrays.asList(
+				"a", "an", "and", "are", "as", "at", "be", "but", "by",
+				"for", "if", "in", "into", "is", "it",
+				"no", "not", "of", "on", "or", "such",
+				"that", "the", "their", "then", "there", "these",
+				"they", "this", "to", "was", "will", "with"
+				);
+
+		String output;
+		String[] words = inputString.split(" ");
+		ArrayList<String> wordsList = new ArrayList<String>();
+		StringBuffer sb = new StringBuffer();
+
+		for(String word : words)
+		{
+			String wordCompare = word.toLowerCase();
+			if(!stopWordsList.contains(wordCompare))
+			{
+				wordsList.add(word);
+			}
+		}
+
+		for (String str : wordsList){
+			sb.append(str + " ");
+		}
+
+		return output = sb.toString();
 	}
+	
+	
+	
+	public static String validateRelationType (String relType) {
+		if (relType.equals("<")) {
+			relType = "&lt;";
+		}
+		
+		return relType;
+	}
+	
 
 
 
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception {
 		String testString = "motionPicture";
 		String experiment = "biblio-bibo";
 
@@ -323,6 +395,9 @@ public class StringUtils {
 
 		String s = "Testing underscore";
 		System.out.println("Without underscore: " + replaceUnderscore(s));
+		
+		String stopwordstext = "The snow is falling and it is close to christmas";
+		System.out.println(removeStopWordsFromString(stopwordstext));
 
 	}
 

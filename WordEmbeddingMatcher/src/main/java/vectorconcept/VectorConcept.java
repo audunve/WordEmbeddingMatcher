@@ -59,14 +59,14 @@ public class VectorConcept {
 		return conceptURI;
 	}
 
-	private String getConceptLabel() {
+	public String getConceptLabel() {
 		return conceptLabel;
 	}
 
 	/**
 	 * @return the labelVectors
 	 */
-	private ArrayList<Double> getLabelVectors() {
+	public ArrayList<Double> getLabelVectors() {
 		return labelVectors;
 	}
 
@@ -80,7 +80,7 @@ public class VectorConcept {
 	/**
 	 * @return the commentVectors
 	 */
-	private ArrayList<Double> getCommentVectors() {
+	public ArrayList<Double> getCommentVectors() {
 		return commentVectors;
 	}
 
@@ -94,7 +94,7 @@ public class VectorConcept {
 	/**
 	 * @return the globalVectors
 	 */
-	private ArrayList<Double> getGlobalVectors() {
+	public ArrayList<Double> getGlobalVectors() {
 		return globalVectors;
 	}
 
@@ -156,7 +156,7 @@ public class VectorConcept {
 
 
 				} if (strings[0].equals("label")) {
-					conceptLabel = strings[1];
+					conceptLabel = strings[1].trim();
 					vc.setConceptLabel(conceptLabel);
 
 
@@ -355,18 +355,41 @@ public static void printGlobalSim(File vectorFileDir, double threshold) throws F
 					
 				}
 			}
-		}
-		
+		}		
 	}
 	
 
-	//testing by comparing vectors from VectorConcepts using cosine
+	//printing cosine sim based on label vectors and global vectors
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		final File vectorFileDir = new File("./files/wordembedding/vector-files-single-ontology");
 		double threshold = 0.6;
 		
-		printLabelAndGlobalSim(vectorFileDir, threshold);
+		VectorConcept vc = new VectorConcept();
+		
+		Set<VectorConcept> vectorConceptSet301 = populate(new File("./files/wordembedding/vector-files/vectorOutput301302-301.txt"));
+		Set<VectorConcept> vectorConceptSet302 = populate(new File("./files/wordembedding/vector-files/vectorOutput301302-302.txt"));
+		
+		System.out.println("There are " + vectorConceptSet301.size() + " vector Concepts");
+		System.out.println("There are " + vectorConceptSet302.size() + " vector Concepts");
+		
+		ArrayList<Double> lv = new ArrayList<Double>();
+		
+		System.out.println("Printing labels and vectors in 301");
+		for (VectorConcept vc301 : vectorConceptSet301) {
+			System.out.println(vc301.getConceptLabel());
+			lv = vc301.getLabelVectors();
+			for (Double d : lv) {
+			
+			System.out.println(d);
+			}
+		}
+		
+		
+		
+		
+		
+		//printLabelAndGlobalSim(vectorFileDir, threshold);
 
 
 	}

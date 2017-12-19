@@ -39,5 +39,8 @@
 	<classpathentry kind="lib" path="/Users/audunvennesland/Documents/PhD/Development/commons-lang3-3.6/commons-lang3-3.6.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/Documents/PhD/Development/commons-math3-3.6.1/commons-math3-3.6.1.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/Documents/PhD/Development/OntoSIM/OntoSim-2.5/lib/ontosim.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/Documents/PhD/Development/AlignmentAPI/align-4.9/lib/ontowrap.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/Documents/PhD/Development/AlignmentAPI/align-4.9/lib/align.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/Documents/PhD/Development/AlignmentAPI/align-4.9/lib/alignsvc.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

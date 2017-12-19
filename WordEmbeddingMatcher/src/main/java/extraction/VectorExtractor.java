@@ -333,6 +333,7 @@ public class VectorExtractor {
 			//create tokens from comment
 			ArrayList<String> tokens = StringUtils.tokenize(comment, true);
 
+			//put all tokens that have an associated vector in the vectorMap in allCommentVectors along with the associated vector
 			for (String s : tokens) {
 				if (vectorMap.containsKey(s)) {
 					commentVectors = vectorMap.get(s);
@@ -345,6 +346,7 @@ public class VectorExtractor {
 
 			}
 
+			//create average vector representing all token vectors in each comment
 			ArrayList<Double> avgs = new ArrayList<Double>();
 
 			int numVectors = 0;
@@ -414,56 +416,58 @@ public class VectorExtractor {
 		String[] v2 = null;
 		StringBuilder sb = new StringBuilder();
 		ArrayList<Double> globalVectors = new ArrayList<Double>();
-		ArrayList<Double> doubles1 = new ArrayList<Double>();
-		ArrayList<Double> doubles2 = new ArrayList<Double>();
+		ArrayList<Double> labelVectors = new ArrayList<Double>();
+		ArrayList<Double> commentVectors = new ArrayList<Double>();
 
 
+		//there is always a label vector
 		if (labelVector != null ) {
 			v1 = labelVector.split(" ");
 
 			if (v1 != null) {
 				for (String s : v1) {
 					if (!s.isEmpty()) {
-						doubles1.add(Double.valueOf(s));
+						labelVectors.add(Double.valueOf(s));
 					}
 				}
 			} else {
-				doubles1 = null;
+				labelVectors = null;
 			}
 
 		}
 
+		//a fixed dimension of vectors is 300
 		int numVectors = 300;
-		//int numVectors = v1.length;
 
+		//if there also are comment vectors, we average the label vector and the comment vector (already averaged between all token vectors for each comment) into a global vector
 		if (commentVector!= null && !commentVector.isEmpty()) {
 			v2 = commentVector.split(" ");
 
 			for (String t : v2) {
 				if (!t.isEmpty()) {
-					doubles2.add(Double.valueOf(t));
+					commentVectors.add(Double.valueOf(t));
 				} else {
-					doubles2 = null;
+					commentVectors = null;
 				}
 			}
 
 			double average = 0;
 			for (int i = 0; i < numVectors; i++) {
-				if (doubles1.size() < 1 && doubles2.size() < 1) {
+				if (labelVectors.size() < 1 && commentVectors.size() < 1) {
 					sb = null;
-				} else if (doubles1.size() < 1 && doubles2.size() > 0) {
-					average = doubles2.get(i);
-				} else if (doubles1.size() > 0 && doubles2.size() < 1) { 
-					average = doubles1.get(i);
+				} else if (labelVectors.size() < 1 && commentVectors.size() > 0) {
+					average = commentVectors.get(i);
+				} else if (labelVectors.size() > 0 && commentVectors.size() < 1) { 
+					average = labelVectors.get(i);
 				} else {
 
-					if (doubles1.get(i) == 0.0) {
-						average = doubles2.get(i);
-					} else if (doubles2.get(i) == 0.0) {
-						average = doubles1.get(i);
+					if (labelVectors.get(i) == 0.0) {
+						average = commentVectors.get(i);
+					} else if (commentVectors.get(i) == 0.0) {
+						average = labelVectors.get(i);
 					} else {
 
-						average = (doubles1.get(i) + doubles2.get(i)) / 2;
+						average = (labelVectors.get(i) + commentVectors.get(i)) / 2;
 					}
 				}
 				globalVectors.add(average);
@@ -472,7 +476,7 @@ public class VectorExtractor {
 
 		} 
 
-
+		//round the vector value to 6 decimals
 		for (double d : globalVectors) {
 			sb.append(MathUtils.round(d, 6) + " ");
 		}
