@@ -12,9 +12,7 @@
     },
     "id": 1,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "misc",
@@ -28,9 +26,7 @@
     },
     "id": 2,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "proceedings",
@@ -44,9 +40,7 @@
     },
     "id": 3,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "proceedings",
@@ -60,9 +54,7 @@
     },
     "id": 4,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "resource",
@@ -76,9 +68,7 @@
     },
     "id": 5,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "incollection",
@@ -92,9 +82,7 @@
     },
     "id": 6,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "incollection",
@@ -108,9 +96,7 @@
     },
     "id": 7,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "phdthesis",
@@ -124,9 +110,7 @@
     },
     "id": 8,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "phdthesis",
@@ -140,9 +124,7 @@
     },
     "id": 9,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "book",
@@ -156,9 +138,7 @@
     },
     "id": 10,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "book",
@@ -172,9 +152,7 @@
     },
     "id": 11,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "publication",
@@ -188,9 +166,7 @@
     },
     "id": 12,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "publication",
@@ -204,9 +180,7 @@
     },
     "id": 13,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "techreport",
@@ -220,9 +194,7 @@
     },
     "id": 14,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "techreport",
@@ -236,9 +208,7 @@
     },
     "id": 15,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inproceedings",
@@ -252,9 +222,7 @@
     },
     "id": 16,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inproceedings",
@@ -268,9 +236,7 @@
     },
     "id": 17,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -284,9 +250,7 @@
     },
     "id": 18,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -300,9 +264,7 @@
     },
     "id": 19,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "mastersthesis",
@@ -316,9 +278,7 @@
     },
     "id": 20,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "mastersthesis",
@@ -332,9 +292,7 @@
     },
     "id": 21,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "softcopy",
@@ -348,9 +306,7 @@
     },
     "id": 22,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inbook",
@@ -364,9 +320,7 @@
     },
     "id": 23,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inbook",

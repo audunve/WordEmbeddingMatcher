@@ -1,41 +1,37 @@
 package statistics;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.semanticweb.owl.align.Alignment;
 import org.semanticweb.owl.align.AlignmentException;
-import org.semanticweb.owl.align.Cell;
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.reasoner.Node;
 import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
-import org.semanticweb.HermiT.Reasoner;
-
-import fr.inrialpes.exmo.align.impl.BasicAlignment;
-import fr.inrialpes.exmo.align.parser.AlignmentParser;
 
 /**
+ * 
  * @author audunvennesland
  * 26. nov. 2017 
  */
 
-
 public class Subclasses {
 
+	/**
+	 * Main method
+	 * @param args
+	 * @throws OWLOntologyCreationException
+	 * @throws AlignmentException
+	 */
 	public static void main(String[] args) throws OWLOntologyCreationException, AlignmentException{
 
 
@@ -56,8 +52,6 @@ public class Subclasses {
 
 			for (Entry<String, Set<String>> e : classesAndSubclasses.entrySet()) {
 
-
-
 					System.out.println("\nSubclasses of " + e.getKey());
 
 					Set<String> subcls = e.getValue();
@@ -65,13 +59,15 @@ public class Subclasses {
 					for (String sub : subcls) {
 						System.out.println(sub);
 					}
-
-				
 			}
 		}
 	}
 
-	
+	/**
+	 * Retrieves the subclasses for each entity in an ontology and returns a Map where the entity name is key and the set of associated subclasses is value
+	 * @param onto the input OWLOntology
+	 * @return Map<String, Set<String> where the entity name is key and the set of associated subclasses is value
+	 */
 	public static Map<String, Set<String>> getSubclasses(OWLOntology onto) {
 
 		Map<String, Set<String>> allClassesAndSubclasses = new HashMap<String, Set<String>>();
@@ -82,7 +78,7 @@ public class Subclasses {
 
 		for (OWLClass cls : allClasses) {
 
-			allClassesAndSubclasses.put(cls.getIRI().toString(), getSubclasses(onto, cls));
+			allClassesAndSubclasses.put(cls.getIRI().toString(), getEntitySubclasses(onto, cls));
 		}
 		
 		//only keep the entries where there are subclasses in the set
@@ -99,27 +95,13 @@ public class Subclasses {
 	}
 
 	
-	
-	public static Map<String, Set<String>> getAllSubclasses(OWLOntology onto) {
-
-		Map<String, Set<String>> classesAndSubclasses = new HashMap<String, Set<String>>();
-
-
-		Set<OWLClass> allClasses = onto.getClassesInSignature();
-
-		for (OWLClass cls : allClasses) {
-
-			classesAndSubclasses.put(cls.getIRI().toString(), getSubclasses(onto, cls));
-		}
-
-
-		return classesAndSubclasses;
-
-	}
-
-
-	
-	private static Set<String> getSubclasses (OWLOntology onto, OWLClass inputClass) {
+	/**
+	 * Helper method that retrieves a set of subclasses for an OWLClass (provided as parameter along with the OWLOntology which is needed for allowing the reasoner to get all subclasses for an OWLClass)
+	 * @param onto the input OWLOntology
+	 * @param inputClass the OWLClass for which subclasses will be retrieved
+	 * @return Set<String> of subclasses for an OWLClass
+	 */
+	private static Set<String> getEntitySubclasses (OWLOntology onto, OWLClass inputClass) {
 		OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
 		OWLReasoner reasoner = reasonerFactory.createReasoner(onto);
 

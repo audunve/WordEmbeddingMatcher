@@ -69,13 +69,13 @@ public class ProduceJSONCrossOntology {
 		String label2Name = null;
 
 		//import reference alignment file
-		File refalignFile = new File("./files/wordembedding/refencealignments/302304/refalign.rdf");
+		File refalignFile = new File("./files/wordembedding/refencealignments/303304/refalign.rdf");
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment refalign = (BasicAlignment)parser.parse(refalignFile.toURI().toString());
 
 		//import the ontologies in the reference alignment
-		File ontoFile1 = new File("./files/wordembedding/allontologies/302304-302.rdf");
-		File ontoFile2 = new File("./files/wordembedding/allontologies/302304-304.rdf");
+		File ontoFile1 = new File("./files/wordembedding/allontologies/303304-303.rdf");
+		File ontoFile2 = new File("./files/wordembedding/allontologies/303304-304.rdf");
 		
 		//parse the ontologies to OWL
 		OWLOntology onto1 = manager.loadOntologyFromOntologyDocument(ontoFile1);
@@ -111,6 +111,9 @@ public class ProduceJSONCrossOntology {
 		File outPutFile = new File("./files/wordembedding/json/" + StringUtils.stripOntologyName(ontoFile1.getName()) + "-" + StringUtils.stripOntologyName(ontoFile2.getName()) + ".json");
 
 		PrintWriter pw = new PrintWriter(outPutFile);
+		
+		JSONObject topLevel = new JSONObject();
+		JSONArray array = new JSONArray();
 
 		for (Cell c : refalign) {
 
@@ -122,15 +125,15 @@ public class ProduceJSONCrossOntology {
 			concept2Uri = c.getObject2AsURI().toString();
 			
 			//we need to distinguish the two ontologies, so do this by finding a unique character in the ontology URI
-			char a_char = concept1Uri.charAt(35);	
+			char a_char = concept1Uri.charAt(7);	
 			
 			//set the ontology
-			if (Character.toString(a_char).equals("e")) {
-				ontology1 = "302";
-				ontology2 = "304";
-			} else {
+			if (Character.toString(a_char).equals("o")) {
 				ontology1 = "304";
-				ontology2 = "302";
+				ontology2 = "303";
+			} else {
+				ontology1 = "303";
+				ontology2 = "304";
 			}
 			
 			ar.setOntology1(ontology1);
@@ -176,26 +179,27 @@ public class ProduceJSONCrossOntology {
 			relation.put("relation", ar.getRelation());
 			
 			//nest the already created JSONObjects in a top-level JSONObject
-			JSONObject topLevel = new JSONObject();
+			topLevel = new JSONObject();
 			topLevel.put("id", ar.getId());
 			topLevel.put("x", cell1);
 			topLevel.put("y", cell2);
 			topLevel.put("relation", ar.getRelation());
 			
 			//create a JSONArray holding each toplevel JSONObject (and the nested ones) in order to have a valid JSON file
-			JSONArray array = new JSONArray();
+			
 			array.add(topLevel);
 			
 
-			Gson gsonPrettyPrint = new GsonBuilder().setPrettyPrinting().create();
-			String jsonString = gsonPrettyPrint.toJson(array);
-
 			
-			//need to convert from unicode for the relation
-			pw.println(StringEscapeUtils.unescapeJava(jsonString));
 			
 
 		}
+		Gson gsonPrettyPrint = new GsonBuilder().setPrettyPrinting().create();
+		String jsonString = gsonPrettyPrint.toJson(array);
+
+		
+		//need to convert from unicode for the relation
+		pw.println(StringEscapeUtils.unescapeJava(jsonString));
 		pw.close();
 	}
 

@@ -13,9 +13,7 @@
     },
     "id": 1,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
@@ -30,9 +28,7 @@
     },
     "id": 2,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "work printed bound, without named publisher sponsoring institution. ",
@@ -47,9 +43,7 @@
     },
     "id": 3,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "mastersthesis",
@@ -64,9 +58,7 @@
     },
     "id": 4,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "mastersthesis",
@@ -81,9 +73,7 @@
     },
     "id": 5,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "article conference proceedings. ",
@@ -98,9 +88,7 @@
     },
     "id": 6,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "article from journal magazine. ",
@@ -115,9 +103,7 @@
     },
     "id": 7,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "report published school other institution, usually numbered within series. ",
@@ -132,9 +118,7 @@
     },
     "id": 8,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inproceedings",
@@ -149,9 +133,7 @@
     },
     "id": 9,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "publication",
@@ -166,9 +148,7 @@
     },
     "id": 10,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "journal (a periodical dedicated particular subject) "he reads medical journals" ",
@@ -183,9 +163,7 @@
     },
     "id": 11,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "book explicit publisher. ",
@@ -200,9 +178,7 @@
     },
     "id": 12,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "proceedings conference. ",
@@ -217,9 +193,7 @@
     },
     "id": 13,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "proceedings",
@@ -234,9 +208,7 @@
     },
     "id": 14,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "proceedings",
@@ -251,9 +223,7 @@
     },
     "id": 15,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "document having author title, formally published. ",
@@ -268,9 +238,7 @@
     },
     "id": 16,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "misc",
@@ -285,9 +253,7 @@
     },
     "id": 17,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "misc",
@@ -302,9 +268,7 @@
     },
     "id": 18,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "PhD thesis. ",
@@ -319,9 +283,7 @@
     },
     "id": 19,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "techreport",
@@ -336,9 +298,7 @@
     },
     "id": 20,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "techreport",
@@ -353,9 +313,7 @@
     },
     "id": 21,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "part book having its own title. ",
@@ -370,9 +328,7 @@
     },
     "id": 22,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -387,9 +343,7 @@
     },
     "id": 23,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -404,9 +358,7 @@
     },
     "id": 24,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inbook",
@@ -421,9 +373,7 @@
     },
     "id": 25,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inbook",
@@ -438,9 +388,7 @@
     },
     "id": 26,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "incollection",
@@ -455,9 +403,7 @@
     },
     "id": 27,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "incollection",
@@ -472,9 +418,7 @@
     },
     "id": 28,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "book",
@@ -489,9 +433,7 @@
     },
     "id": 29,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "book",
@@ -506,9 +448,7 @@
     },
     "id": 30,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "same INPROCEEDINGS, included Scribe compatibility. ",
@@ -523,9 +463,7 @@
     },
     "id": 31,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Master's thesis. ",
@@ -540,9 +478,7 @@
     },
     "id": 32,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Use type when nothing else fits. ",
@@ -557,9 +493,7 @@
     },
     "id": 33,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Base class all entries ",
@@ -574,9 +508,7 @@
     },
     "id": 34,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "phdthesis",
@@ -591,9 +523,7 @@
     },
     "id": 35,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "phdthesis",

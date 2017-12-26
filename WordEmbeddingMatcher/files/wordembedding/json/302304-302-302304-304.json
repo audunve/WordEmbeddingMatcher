@@ -13,9 +13,7 @@
     },
     "id": 1,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "film/movie/motion picture. ",
@@ -30,9 +28,7 @@
     },
     "id": 2,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Master's PhD thesis. ",
@@ -47,9 +43,7 @@
     },
     "id": 3,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "mastersthesis",
@@ -64,9 +58,7 @@
     },
     "id": 4,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "book single entity, opposed collection. ",
@@ -81,9 +73,7 @@
     },
     "id": 5,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "chapter",
@@ -97,9 +87,7 @@
     },
     "id": 6,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inproceedings",
@@ -114,9 +102,7 @@
     },
     "id": 7,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inproceedings",
@@ -131,9 +117,7 @@
     },
     "id": 8,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "person",
@@ -148,9 +132,7 @@
     },
     "id": 9,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "publisher. ",
@@ -165,9 +147,7 @@
     },
     "id": 10,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "work may composed several parts chapter. May monography, collection proceedings. ",
@@ -182,9 +162,7 @@
     },
     "id": 11,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "publication",
@@ -199,9 +177,7 @@
     },
     "id": 12,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "book collection texts articles. ",
@@ -216,9 +192,7 @@
     },
     "id": 13,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "proceedings",
@@ -233,9 +207,7 @@
     },
     "id": 14,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "proceedings",
@@ -250,9 +222,7 @@
     },
     "id": 15,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "misc",
@@ -267,9 +237,7 @@
     },
     "id": 16,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "misc",
@@ -284,9 +252,7 @@
     },
     "id": 17,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "part something (either Book Proceedings). ",
@@ -301,9 +267,7 @@
     },
     "id": 18,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "techreport",
@@ -318,9 +282,7 @@
     },
     "id": 19,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "inbook",
@@ -334,9 +296,7 @@
     },
     "id": 20,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -351,9 +311,7 @@
     },
     "id": 21,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -368,9 +326,7 @@
     },
     "id": 22,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "label": "article",
@@ -385,9 +341,7 @@
     },
     "id": 23,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Base class all entries ",
@@ -402,9 +356,7 @@
     },
     "id": 24,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "incollection",
@@ -418,9 +370,7 @@
     },
     "id": 25,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "book",
@@ -435,9 +385,7 @@
     },
     "id": 26,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "document informally published published. ",
@@ -452,9 +400,7 @@
     },
     "id": 27,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "softcopy",
@@ -469,9 +415,7 @@
     },
     "id": 28,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "journal. ",
@@ -486,9 +430,7 @@
     },
     "id": 29,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "label": "phdthesis",

@@ -54,20 +54,20 @@ public class Evaluator {
 
 		eval.eval(p);
 
-		System.out.println("------------------------------");
-		System.out.println("Evaluator scores for " + inputAlignmentFileName);
-		System.out.println("------------------------------");
-		System.out.println("F-measure: " + eval.getResults().getProperty("fmeasure").toString());
-		System.out.println("Precision: " + eval.getResults().getProperty("precision").toString());
-		System.out.println("Recall: " + eval.getResults().getProperty("recall").toString());
+		System.err.println("------------------------------");
+		System.err.println("Evaluator scores for " + inputAlignmentFileName);
+		System.err.println("------------------------------");
+		System.err.println("F-measure: " + eval.getResults().getProperty("fmeasure").toString());
+		System.err.println("Precision: " + eval.getResults().getProperty("precision").toString());
+		System.err.println("Recall: " + eval.getResults().getProperty("recall").toString());
 
-		System.out.println("True positives (TP): " + eval.getResults().getProperty("true positive").toString());
+		System.err.println("True positives (TP): " + eval.getResults().getProperty("true positive").toString());
 
 		int fp = eval.getFound() - eval.getCorrect();
-		System.out.println("False positives (FP): " + fp);
+		System.err.println("False positives (FP): " + fp);
 		int fn = eval.getExpected() - eval.getCorrect();
-		System.out.println("False negatives (FN): " + fn);
-		System.out.println("\n");
+		System.err.println("False negatives (FN): " + fn);
+		System.err.println("\n");
 
 	}
 

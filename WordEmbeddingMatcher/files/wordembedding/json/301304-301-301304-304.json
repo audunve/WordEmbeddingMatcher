@@ -14,9 +14,7 @@
     },
     "id": 1,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "document having author title, formally published. ",
@@ -32,9 +30,7 @@
     },
     "id": 2,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "part book having its own title. ",
@@ -49,9 +45,7 @@
     },
     "id": 3,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "book single entity, opposed collection. ",
@@ -67,9 +61,7 @@
     },
     "id": 4,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "article from journal magazine. ",
@@ -85,9 +77,7 @@
     },
     "id": 5,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "article from journal magazine. ",
@@ -103,9 +93,7 @@
     },
     "id": 6,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "article from journal magazine. ",
@@ -121,9 +109,7 @@
     },
     "id": 7,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "work printed bound, without named publisher sponsoring institution. ",
@@ -139,9 +125,7 @@
     },
     "id": 8,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "work printed bound, without named publisher sponsoring institution. ",
@@ -157,9 +141,7 @@
     },
     "id": 9,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Use type when nothing else fits. ",
@@ -175,9 +157,7 @@
     },
     "id": 10,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Use type when nothing else fits. ",
@@ -193,9 +173,7 @@
     },
     "id": 11,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "report published school other institution, usually numbered within series. ",
@@ -211,9 +189,7 @@
     },
     "id": 12,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "report published school other institution, usually numbered within series. ",
@@ -229,9 +205,7 @@
     },
     "id": 13,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "PhD thesis. ",
@@ -247,9 +221,7 @@
     },
     "id": 14,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Technical documentation. ",
@@ -265,9 +237,7 @@
     },
     "id": 15,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Technical documentation. ",
@@ -283,9 +253,7 @@
     },
     "id": 16,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "book collection texts articles. ",
@@ -301,9 +269,7 @@
     },
     "id": 17,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "Master's thesis. ",
@@ -319,9 +285,7 @@
     },
     "id": 18,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
@@ -336,9 +300,7 @@
     },
     "id": 19,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "proceedings conference. ",
@@ -354,9 +316,7 @@
     },
     "id": 20,
     "relation": "<"
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "proceedings conference. ",
@@ -372,9 +332,7 @@
     },
     "id": 21,
     "relation": "="
-  }
-]
-[
+  },
   {
     "x": {
       "comment": "journal (a periodical dedicated particular subject) "he reads medical journals" ",

@@ -62,14 +62,14 @@ public class ProduceJSONSingleOntology {
 		String label2Name = null;
 
 		//import reference alignment file
-		File refalignFile = new File("./files/wordembedding/refencealignments/301301/301301-refalign.rdf");
+		File refalignFile = new File("./files/wordembedding/refencealignments/303303/303303-refalign.rdf");
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment refalign = (BasicAlignment)parser.parse(refalignFile.toURI().toString());
 
 		//import the ontologies in the reference alignment
 		//set the same ontology file for both File instances
-		File ontoFile1 = new File("./files/wordembedding/allontologies/301302-301.rdf");
-		File ontoFile2 = new File("./files/wordembedding/allontologies/301302-301.rdf");
+		File ontoFile1 = new File("./files/wordembedding/allontologies/301303-303.rdf");
+		File ontoFile2 = new File("./files/wordembedding/allontologies/301303-303.rdf");
 
 		//parse the ontologies to OWL
 		OWLOntology onto1 = manager.loadOntologyFromOntologyDocument(ontoFile1);
@@ -107,15 +107,18 @@ public class ProduceJSONSingleOntology {
 		File outPutFile = new File("./files/wordembedding/json/" + StringUtils.stripOntologyName(ontoFile1.getName()) + "-" + StringUtils.stripOntologyName(ontoFile2.getName()) + ".json");
 
 		PrintWriter pw = new PrintWriter(outPutFile);
+		
+		JSONObject topLevel = new JSONObject();
+		JSONArray array = new JSONArray();
 
 		for (Cell c : refalign) {
 
-			
+			ar.setId(id++);
 
 			//since we are only using a single ontology in this case, just set the ontology name for both
 			//ontology 1 and ontology 2
-			ontology1 = "301";
-			ontology2 = "301";
+			ontology1 = "303";
+			ontology2 = "303";
 			
 			concept1Uri = c.getObject1AsURI().toString();
 			concept2Uri = c.getObject2AsURI().toString();
@@ -128,7 +131,7 @@ public class ProduceJSONSingleOntology {
 			ar.setComment2(mergedCommentMap.get(concept2Uri));
 
 
-			ar.setId(id++);
+			
 			ar.setOntology1(ontology1);
 			ar.setConceptUri1(concept1Uri);
 			ar.setLabel1(label1Name);
@@ -154,27 +157,28 @@ public class ProduceJSONSingleOntology {
 			relation.put("relation", ar.getRelation());
 
 			//nested JSON objects
-			JSONObject topLevel = new JSONObject();
+			topLevel = new JSONObject();
 			topLevel.put("id", ar.getId());
 			topLevel.put("x", cell1);
 			topLevel.put("y", cell2);
 			topLevel.put("relation", ar.getRelation());
 			
 			//create a JSONArray holding each toplevel JSONObject (and the nested ones) in order to have a valid JSON file
-			JSONArray array = new JSONArray();
+			//array = new JSONArray();
 			array.add(topLevel);
 			
 
-			//using the Gson library for pretty printing the JSON output
-			Gson gsonPrettyPrint = new GsonBuilder().setPrettyPrinting().create();
-			String jsonString = gsonPrettyPrint.toJson(array);
-
 			
-			//need to convert from unicode for the relation using Apache Commons StringEscapeUtils.unescapeJava
-			pw.println(StringEscapeUtils.unescapeJava(jsonString));
 			
 
 		}
+		//using the Gson library for pretty printing the JSON output
+		Gson gsonPrettyPrint = new GsonBuilder().setPrettyPrinting().create();
+		String jsonString = gsonPrettyPrint.toJson(array);
+
+		
+		//need to convert from unicode for the relation using Apache Commons StringEscapeUtils.unescapeJava
+		pw.println(StringEscapeUtils.unescapeJava(jsonString));
 		pw.close();
 	}
 

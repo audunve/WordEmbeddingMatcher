@@ -31,7 +31,7 @@ public class TestMatcher {
 		//logger.info("Hello from TestMatcher");
 
 		/*** 1. SELECT THE MATCHER TO BE RUN ***/
-		final String MATCHER = "WE-GLOBAL";
+		final String MATCHER = "WE-LABEL";
 
 		/*** 2. SELECT THE TWO ONTOLOGIES TO BE MATCHED ***/
 		File ontoFile1 = new File("./files/wordembedding/allontologies/303304-303.rdf");
@@ -43,7 +43,10 @@ public class TestMatcher {
 		
 
 		/*** INITIAL VALUES, NO NEED TO TOUCH THESE ***/
-		final double threshold = 0.6;
+		final double threshold = 0.9;
+		final String thresholdValue = removeCharAt(String.valueOf(threshold),1);	
+		
+		
 		String alignmentFileName = null;
 		File outputAlignment = null;
 		String ontologyParameter1 = null;
@@ -54,8 +57,10 @@ public class TestMatcher {
 		AlignmentProcess a = null;
 		
 		/*** USED FOR INCLUDING THE ONTOLOGY FILE NAMES IN THE COMPUTED ALIGNMENT FILE ***/
-		String onto1 = StringUtils.stripPath(ontoFile1.toString());
-		String onto2 = StringUtils.stripPath(ontoFile2.toString());
+		//String onto1 = StringUtils.stripPath(ontoFile1.toString());
+		//String onto2 = StringUtils.stripPath(ontoFile2.toString());
+		String onto1 = ontoFile1.getName().substring(ontoFile1.getName().lastIndexOf("/") +1, ontoFile1.getName().lastIndexOf("/") + 4);
+		String onto2 = ontoFile2.getName().substring(ontoFile2.getName().lastIndexOf("/") +4, ontoFile2.getName().lastIndexOf("/") + 7);	
 
 		switch(MATCHER) {
 
@@ -69,7 +74,7 @@ public class TestMatcher {
 			
 			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
 
-			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "_" + threshold + "_" + "-GlobalVectors.rdf";
+			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "-GlobalVectors-" + thresholdValue + ".rdf";
 
 			outputAlignment = new File(alignmentFileName);
 
@@ -104,7 +109,7 @@ public class TestMatcher {
 			
 			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
 
-			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "_" + threshold + "_" + "-LabelVectors.rdf";
+			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "-LabelVectors-" + thresholdValue + ".rdf";
 
 			outputAlignment = new File(alignmentFileName);
 
@@ -127,47 +132,16 @@ public class TestMatcher {
 			break;
 			
 			
-		
-		case "WE-SUBS":
-			
-			a = new WESubsMatcher();
-
-			a.init(ontoFile1.toURI(), ontoFile2.toURI());
-			params = new Properties();
-			params.setProperty("", "");
-			
-			//adding an input alignment
-			a.align((Alignment)null, params);	
-			
-			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
-
-			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "[" + threshold + "]" + "-String.rdf";
-
-			outputAlignment = new File(alignmentFileName);
-
-			writer = new PrintWriter(
-					new BufferedWriter(
-							new FileWriter(outputAlignment)), true); 
-			renderer = new RDFRendererVisitor(writer);
-
-			BasicAlignment WESubsAlignment = (BasicAlignment)(a.clone());
-			
-			WESubsAlignment.cut(threshold);
-
-			WESubsAlignment.render(renderer);
-			
-			System.err.println("The StringAlignment contains " + WESubsAlignment.nbCells() + " correspondences");
-			writer.flush();
-			writer.close();
-
-			System.out.println("Matching completed!");
-			break;
-			
-			
 
 		}
+		
+		
 
 	}
+	
+	public static String removeCharAt(String s, int pos) {
+	      return s.substring(0, pos) + s.substring(pos + 1);
+	   }
 
 	
 }
