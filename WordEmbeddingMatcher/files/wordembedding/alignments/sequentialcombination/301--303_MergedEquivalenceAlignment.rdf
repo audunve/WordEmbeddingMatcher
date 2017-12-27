@@ -8,16 +8,15 @@
   <xml>yes</xml>
   <level>0</level>
   <type>**</type>
-  <relationClass>fr.inrialpes.exmo.align.impl.rel.A5AlgebraRelation</relationClass>
   <alext:method>fr.inrialpes.exmo.align.impl.URIAlignment#clone</alext:method>
   <onto1>
     <Ontology rdf:about="http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf">
-      <location>http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf</location>
+      <location>file:/Users/audunvennesland/git/WordEmbeddingMatcher/WordEmbeddingMatcher/./files/wordembedding/allontologies/301303-301.rdf</location>
     </Ontology>
   </onto1>
   <onto2>
     <Ontology rdf:about="http://www.aifb.uni-karlsruhe.de/ontology">
-      <location>http://www.aifb.uni-karlsruhe.de/ontology</location>
+      <location>file:/Users/audunvennesland/git/WordEmbeddingMatcher/WordEmbeddingMatcher/./files/wordembedding/allontologies/301303-303.rdf</location>
     </Ontology>
   </onto2>
   <map>
@@ -54,16 +53,16 @@
   </map>
   <map>
     <Cell>
-      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings'/>
-      <entity2 rdf:resource='http://www.aifb.uni-karlsruhe.de/ontology#InProceedings'/>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet'/>
+      <entity2 rdf:resource='http://www.aifb.uni-karlsruhe.de/ontology#Booklet'/>
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>
   <map>
     <Cell>
-      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet'/>
-      <entity2 rdf:resource='http://www.aifb.uni-karlsruhe.de/ontology#Booklet'/>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings'/>
+      <entity2 rdf:resource='http://www.aifb.uni-karlsruhe.de/ontology#InProceedings'/>
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>

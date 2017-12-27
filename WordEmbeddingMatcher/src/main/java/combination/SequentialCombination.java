@@ -183,10 +183,73 @@ public class SequentialCombination {
 		}
 
 
-		//TO-DO:need to "prettylabel" the relation types
-
-
 		return subsumptionAlignment;
+
+	}
+
+	public static BasicAlignment wordEmbeddingEquivalenceSuperclasses (File inputAlignmentFile) throws AlignmentException, OWLOntologyCreationException, IOException, URISyntaxException {
+
+		BasicAlignment equivalenceAlignment = new URIAlignment();
+
+
+		AlignmentParser parser = new AlignmentParser();
+		BasicAlignment inputAlignment = (BasicAlignment) parser.parse(inputAlignmentFile.toURI().toString());
+
+		URI onto1URI = inputAlignment.getOntology1URI();
+		URI onto2URI = inputAlignment.getOntology2URI();
+
+		//need to initialise the alignment with ontology URIs and the type of relation (e.g. A5AlgebraRelation) otherwise exceptions are thrown
+		equivalenceAlignment.init( onto1URI, onto2URI, A5AlgebraRelation.class, BasicConfidence.class );
+
+		File ontoFile1 = new File(inputAlignment.getFile1().getRawPath());
+		File ontoFile2 = new File(inputAlignment.getFile2().getRawPath());
+
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+
+		//get the ontologies from the alignment file
+		OWLOntology onto1 = manager.loadOntologyFromOntologyDocument(ontoFile1);
+		OWLOntology onto2 = manager.loadOntologyFromOntologyDocument(ontoFile2);
+
+		//create a map holding the set of superclasses (value) for each class (key)
+		Map<String, Set<String>> onto1ClassesAndSuperclasses = statistics.Superclasses.getSuperclasses(onto1);
+		Map<String, Set<String>> onto2ClassesAndSuperclasses = statistics.Superclasses.getSuperclasses(onto2);
+
+		//set of superclasses for each class in equivalence relation (will always be 1)
+		Set<String> super1 = null;
+		Set<String> super2 = null;
+
+		//the superclass contained in the set of superclasses (will be transformed to URI within the coming for loop)
+		String superCls1 = null;
+		String superCls2 = null;
+
+
+		for (Cell c : inputAlignment) {
+
+			if (onto1ClassesAndSuperclasses.containsKey(c.getObject1().toString()) && 
+					onto2ClassesAndSuperclasses.containsKey(c.getObject2().toString())) {
+
+				//get the sets of superclasses for each class in the equivalence relation
+				super1 = onto1ClassesAndSuperclasses.get(c.getObject1().toString());
+				super2 = onto2ClassesAndSuperclasses.get(c.getObject2().toString());
+
+				for (String s1 : super1) {
+					superCls1 = s1;
+				}
+
+				for (String s2 : super2) {
+					superCls2 = s2;
+				}
+
+				//the objects in the equivalence relation have to be URIs
+				URI us1 = new URI(superCls1);
+				URI us2 = new URI(superCls2);
+
+				equivalenceAlignment.addAlignCell(us1, us2, "=", 1.0);
+			}			
+		}
+
+		return equivalenceAlignment;
+
 
 	}
 
@@ -217,21 +280,76 @@ public class SequentialCombination {
 		File equivalenceAlignmentFile = new File("./files/wordembedding/alignments/303-304-LabelVectors-09.rdf");
 		String refAlign = "./files/wordembedding/referencealignment_correctOrder/303304/303304_refalign.rdf";		
 		
+		AlignmentParser parser = new AlignmentParser();
+		BasicAlignment originalEquivalenceAlignment = (BasicAlignment) parser.parse(equivalenceAlignmentFile.toURI().toString());
+
+		//********* EQUIVALENCE RELATION *************
+
 		//evaluate the equivalence alignment
 		Evaluator.evaluateSingleAlignment(equivalenceAlignmentFile.getPath(), refAlign);
 
+		
+
+		//********* EQUIVALENCE SUPERCLASS RELATION *************
+
+		BasicAlignment equivalenceSuperclassAlignment = wordEmbeddingEquivalenceSuperclasses(equivalenceAlignmentFile);
+
+
+		System.out.println("Printing equivalenceSuperclassAlignment (" + equivalenceSuperclassAlignment.nbCells() + " cells)");
+
+		for (Cell c : equivalenceSuperclassAlignment) {
+			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
+		}
+
+		//print to alignment file
 		String onto1 = equivalenceAlignmentFile.getName().substring(equivalenceAlignmentFile.getName().lastIndexOf("/") +1, equivalenceAlignmentFile.getName().lastIndexOf("/") + 4);
 		String onto2 = equivalenceAlignmentFile.getName().substring(equivalenceAlignmentFile.getName().lastIndexOf("/") +4, equivalenceAlignmentFile.getName().lastIndexOf("/") + 8);	
+		String equivalenceSuperclassAlignmentFileName = "./files/wordembedding/alignments/sequentialcombination/" + onto1 + "-" + onto2 + "_" + "EquivalenceSuperclassAlignment.rdf";
 
-		//System.out.println("onto1: " + onto1 + ", onto2: " + onto2);
+		File outputAlignmentEquivalenceSuper = new File(equivalenceSuperclassAlignmentFileName);
 
-		BasicAlignment superclassAlignment = wordEmbeddingSubsumptionSuperclasses(equivalenceAlignmentFile);	
+		PrintWriter writerEquivalenceSuper = new PrintWriter(
+				new BufferedWriter(
+						new FileWriter(outputAlignmentEquivalenceSuper)), true); 
+		AlignmentVisitor rendererEquivalenceSuper = new RDFRendererVisitor(writerEquivalenceSuper);
+
+		equivalenceSuperclassAlignment.render(rendererEquivalenceSuper);
+
+		writerEquivalenceSuper.flush();
+		writerEquivalenceSuper.close();
+
+		//evaluate
+		Evaluator.evaluateSingleAlignment(equivalenceSuperclassAlignmentFileName, refAlign);
+
+
+		//merge the initial equivalence relation and the equivalence super relation alignment files and use this for the sub/superclass alignments		
+		BasicAlignment mergedEquivalenceRelationAlignment = mergeTwoAlignments(originalEquivalenceAlignment, equivalenceSuperclassAlignment);
 		
+		//print to alignment file
+		String mergedEquivalenceRelationAlignmentFileName = "./files/wordembedding/alignments/sequentialcombination/" + onto1 + "-" + onto2 + "_" + "MergedEquivalenceAlignment.rdf";
+		
+		File mergedEquivalenceRelationFile = new File(mergedEquivalenceRelationAlignmentFileName);
+
+		PrintWriter writerMergedEquivalence = new PrintWriter(
+				new BufferedWriter(
+						new FileWriter(mergedEquivalenceRelationFile)), true); 
+		AlignmentVisitor rendererMergedEquivalence = new RDFRendererVisitor(writerMergedEquivalence);
+
+		mergedEquivalenceRelationAlignment.render(rendererMergedEquivalence);
+
+		writerMergedEquivalence.flush();
+		writerMergedEquivalence.close();
+
+		
+		//********* SUBSUMPTION SUPERCLASS RELATION *************
+
+		BasicAlignment superclassAlignment = wordEmbeddingSubsumptionSuperclasses(mergedEquivalenceRelationFile);	
+
 		System.out.println("Printing superclassAlignment (" + superclassAlignment.nbCells() + " cells)");
 
-//		for (Cell c : superclassAlignment) {
-//			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
-//		}
+		//		for (Cell c : superclassAlignment) {
+		//			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
+		//		}
 
 		//print to alignment file
 		String superclassAlignmentFileName = "./files/wordembedding/alignments/sequentialcombination/" + onto1 + "-" + onto2 + "_" + "SuperclassAlignment.rdf";
@@ -247,19 +365,20 @@ public class SequentialCombination {
 
 		writerSuper.flush();
 		writerSuper.close();
-		
+
 		//evaluate
 		Evaluator.evaluateSingleAlignment(superclassAlignmentFileName, refAlign);
 
 
-		//SUBCLASS ALIGNMENT
-		BasicAlignment subclassAlignment = wordEmbeddingSubsumptionSubclasses(equivalenceAlignmentFile);
-		
+		//********* SUBSUMPTION SUBCLASS RELATION *************
+
+		BasicAlignment subclassAlignment = wordEmbeddingSubsumptionSubclasses(mergedEquivalenceRelationFile);
+
 		System.out.println("\nPrinting subclassAlignment (" + subclassAlignment.nbCells() + " cells)");
 
-//		for (Cell c : subclassAlignment) {
-//			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
-//		}
+		//		for (Cell c : subclassAlignment) {
+		//			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
+		//		}
 
 		//print to alignment file
 		String subclassAlignmentFileName = "./files/wordembedding/alignments/sequentialcombination/" + onto1 + "-" + onto2 + "_" + "SubclassAlignment.rdf";
@@ -279,15 +398,16 @@ public class SequentialCombination {
 		Evaluator.evaluateSingleAlignment(subclassAlignmentFileName, refAlign);
 
 
-		// MERGED ALIGNMENT (SUPERCLASS AND SUBCLASS)
-		
+		//********* MERGED ALIGNMENT (SUPERCLASS AND SUBCLASS) *************
+
+
 		BasicAlignment mergedAlignment = mergeTwoAlignments(superclassAlignment, subclassAlignment);
-		
+
 		System.out.println("\nPrinting mergedAlignment (" + mergedAlignment.nbCells() + " cells)");
 
-//		for (Cell c : mergedAlignment) {
-//			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
-//		}
+		//		for (Cell c : mergedAlignment) {
+		//			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
+		//		}
 
 		//print to alignment file
 		String mergedAlignmentFileName = "./files/wordembedding/alignments/sequentialcombination/" + onto1 + "-" + onto2 + "_" + "MergedAlignment.rdf";
@@ -301,27 +421,27 @@ public class SequentialCombination {
 		mergedAlignment.render(rendererMerged);
 		writerMerged.flush();
 		writerMerged.close();
-		
+
 		//evaluate
 		Evaluator.evaluateSingleAlignment(mergedAlignmentFileName, refAlign);
 
-		
-		// MERGED ALIGNMENT (SUPERCLASS, SUBCLASS and EQUAL)
-		
+
+		//********* MERGED ALIGNMENT (SUPERCLASS, SUBCLASS and EQUAL) *************
+
 		//parse the original equivalence alignment
-		AlignmentParser parser = new AlignmentParser();
-		
-		BasicAlignment equivalenceAlignment = (BasicAlignment) parser.parse(new URI(StringUtils.convertToFileURL(equivalenceAlignmentFile.getPath())));
-		
+		AlignmentParser parser2 = new AlignmentParser();
+
+		BasicAlignment equivalenceAlignment = (BasicAlignment) parser2.parse(new URI(StringUtils.convertToFileURL(equivalenceAlignmentFile.getPath())));
+
 		//merge the mergedAlignment (subclasses + superclasses and the equivalence alignment)
-		BasicAlignment mergedAlignmentSubsAndEqual = mergeTwoAlignments(mergedAlignment, equivalenceAlignment);
+		BasicAlignment mergedAlignmentSubsAndEqual = mergeTwoAlignments(mergedAlignment, mergedEquivalenceRelationAlignment);
 
 		System.out.println("\nPrinting mergedAlignmentSubsAndEqual (" + mergedAlignmentSubsAndEqual.nbCells() + " cells)");
 
 		for (Cell c : mergedAlignmentSubsAndEqual) {
 			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " - " + ((BasicRelation) (c.getRelation())).getPrettyLabel() + " - " + c.getStrength());
 		}
-		
+
 		//print to alignment file
 		String mergedSubsAndEqualAlignmentFileName = "./files/wordembedding/alignments/sequentialcombination/" + onto1 + "-" + onto2 + "_" + "MergedAlignmentSubsAndEqual.rdf";
 
@@ -334,7 +454,7 @@ public class SequentialCombination {
 		mergedAlignmentSubsAndEqual.render(rendererMergedSubsAndEqual);
 		writerMergedSubsAndEqual.flush();
 		writerMergedSubsAndEqual.close();
-		
+
 		//evaluate
 		Evaluator.evaluateSingleAlignment(mergedSubsAndEqualAlignmentFileName, refAlign);
 	}
