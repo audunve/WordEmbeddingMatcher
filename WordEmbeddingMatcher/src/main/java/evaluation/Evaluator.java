@@ -35,13 +35,13 @@ import fr.inrialpes.exmo.align.parser.AlignmentParser;
 public class Evaluator {
 
 	/**
-	 * Evaluates a single alignment against a reference alignment and prints precision, recall, f-measure, true positives (TP), false positives (FP) and false negatives (FN)
+	 * Evaluates a single alignment from file against a reference alignment (also from file) and prints precision, recall, f-measure, true positives (TP), false positives (FP) and false negatives (FN)
 	 * @param inputAlignmentFileName
 	 * @param referenceAlignmentFileName
 	 * @throws AlignmentException
 	 * @throws URISyntaxException
 	 */
-	public static void evaluateSingleAlignment (String inputAlignmentFileName, String referenceAlignmentFileName) throws AlignmentException, URISyntaxException {
+	public static void evaluateSingleAlignmentFile (String inputAlignmentFileName, String referenceAlignmentFileName) throws AlignmentException, URISyntaxException {
 
 		AlignmentParser refAlignParser = new AlignmentParser(0);
 		AlignmentParser evalAlignParser = new AlignmentParser(1);
@@ -56,6 +56,37 @@ public class Evaluator {
 
 		System.err.println("------------------------------");
 		System.err.println("Evaluator scores for " + inputAlignmentFileName);
+		System.err.println("------------------------------");
+		System.err.println("F-measure: " + eval.getResults().getProperty("fmeasure").toString());
+		System.err.println("Precision: " + eval.getResults().getProperty("precision").toString());
+		System.err.println("Recall: " + eval.getResults().getProperty("recall").toString());
+
+		System.err.println("True positives (TP): " + eval.getResults().getProperty("true positive").toString());
+
+		int fp = eval.getFound() - eval.getCorrect();
+		System.err.println("False positives (FP): " + fp);
+		int fn = eval.getExpected() - eval.getCorrect();
+		System.err.println("False negatives (FN): " + fn);
+		System.err.println("\n");
+
+	}
+	
+	/**
+	 * Evaluates a single alignment against a reference alignment and prints precision, recall, f-measure, true positives (TP), false positives (FP) and false negatives (FN)
+	 * @param inputAlignmentFileName
+	 * @param referenceAlignmentFileName
+	 * @throws AlignmentException
+	 * @throws URISyntaxException
+	 */
+	public static void evaluateSingleAlignment (BasicAlignment inputAlignment, BasicAlignment referenceAlignment) throws AlignmentException, URISyntaxException {
+
+		Properties p = new Properties();
+		PRecEvaluator eval = new PRecEvaluator(referenceAlignment, inputAlignment);
+
+		eval.eval(p);
+
+		System.err.println("------------------------------");
+		System.err.println("Evaluator scores for " + inputAlignment);
 		System.err.println("------------------------------");
 		System.err.println("F-measure: " + eval.getResults().getProperty("fmeasure").toString());
 		System.err.println("Precision: " + eval.getResults().getProperty("precision").toString());

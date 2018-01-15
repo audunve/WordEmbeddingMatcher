@@ -31,7 +31,7 @@ public class TestMatcher {
 		//logger.info("Hello from TestMatcher");
 
 		/*** 1. SELECT THE MATCHER TO BE RUN ***/
-		final String MATCHER = "WE-LABEL";
+		final String MATCHER = "STRING";
 
 		/*** 2. SELECT THE TWO ONTOLOGIES TO BE MATCHED ***/
 		File ontoFile1 = new File("./files/wordembedding/allontologies/303304-303.rdf");
@@ -125,6 +125,41 @@ public class TestMatcher {
 			WELabelAlignment.render(renderer);
 			
 			System.err.println("The WELabel alignment contains " + WELabelAlignment.nbCells() + " correspondences");
+			writer.flush();
+			writer.close();
+
+			System.out.println("Matching completed!");
+			break;
+			
+		
+		case "STRING":
+			a = new ISubMatcher();
+
+			a.init(ontoFile1.toURI(), ontoFile2.toURI());
+			params = new Properties();
+			params.setProperty("", "");
+			a.align((Alignment)null, params);	
+			
+			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
+
+			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "-ISub-" + thresholdValue + ".rdf";
+
+			outputAlignment = new File(alignmentFileName);
+
+			writer = new PrintWriter(
+					new BufferedWriter(
+							new FileWriter(outputAlignment)), true); 
+			renderer = new RDFRendererVisitor(writer);
+
+			BasicAlignment StringAlignment = (BasicAlignment)(a.clone());
+			
+			
+
+			StringAlignment.cut(threshold);
+
+			StringAlignment.render(renderer);
+			
+			System.err.println("The StringAlignment contains " + StringAlignment.nbCells() + " correspondences");
 			writer.flush();
 			writer.close();
 

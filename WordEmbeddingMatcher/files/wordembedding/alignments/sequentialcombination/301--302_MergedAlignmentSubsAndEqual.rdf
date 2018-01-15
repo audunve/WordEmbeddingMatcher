@@ -38,6 +38,22 @@
   </map>
   <map>
     <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InCollection'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Proceedings'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9583333333333333</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
       <relation>&lt;</relation>
@@ -70,6 +86,38 @@
   </map>
   <map>
     <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
+      <relation>&lt;</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Book'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9181818181818182</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Book'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InBook'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
       <relation>&lt;</relation>
@@ -95,6 +143,14 @@
   <map>
     <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#TechReport'/>
+      <relation>></relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Misc'/>
       <relation>></relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
@@ -104,14 +160,6 @@
     <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#MastersThesis'/>
-      <relation>></relation>
-      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
-    </Cell>
-  </map>
-  <map>
-    <Cell>
-      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry'/>
-      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#TechReport'/>
       <relation>></relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
@@ -135,7 +183,7 @@
   <map>
     <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry'/>
-      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#PhdThesis'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InBook'/>
       <relation>></relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
@@ -143,7 +191,7 @@
   <map>
     <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry'/>
-      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InBook'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#PhdThesis'/>
       <relation>></relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
@@ -185,7 +233,7 @@
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Misc'/>
       <relation>=</relation>
-      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9999999999999999</measure>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>
   <map>
@@ -193,6 +241,14 @@
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
       <relation>&lt;</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#PhdThesis'/>
+      <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>
@@ -206,10 +262,42 @@
   </map>
   <map>
     <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#TechReport'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Conference'/>
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
       <relation>&lt;</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
+      <relation>&lt;</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InBook'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Book'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9</measure>
     </Cell>
   </map>
   <map>
@@ -222,9 +310,9 @@
   </map>
   <map>
     <Cell>
-      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook'/>
-      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
-      <relation>&lt;</relation>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Mastersthesis'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#MastersThesis'/>
+      <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>
@@ -242,6 +330,14 @@
       <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication'/>
       <relation>&lt;</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings'/>
+      <entity2 rdf:resource='http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InProceedings'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9583333333333333</measure>
     </Cell>
   </map>
 </Alignment>

@@ -25,7 +25,8 @@
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
       <alignapilocalns:Alignment_argument xmlns:alignapilocalns="http://ai-lab-webserver.aegean.gr/ai-lab/oaei2011/alignArguments.rdf#">Subsumption relation (less than) between onto301:Manual and onto302v2.1:Publication is asserted</alignapilocalns:Alignment_argument>
       <alignapilocalns:support xmlns:alignapilocalns="http://ac.liv.ac.uk/just#">The argument is in favour</alignapilocalns:support>
-    </Cell>
+   </Cell>
+    <test>Rewritten</test>
   </map>
   <map>
     <Cell rdf:about="19">
