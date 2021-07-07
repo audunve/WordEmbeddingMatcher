@@ -2,6 +2,7 @@ package json;
 import java.util.ArrayList;
 
 /**
+ * Prints relations in an alignment file to JSON format.
  * @author audunvennesland
  * 15. des. 2017 
  */
@@ -116,6 +117,7 @@ public class AlignmentRelation {
 	 * @param comment1 the comment1 to set
 	 */
 	public void setComment1(String comment1) {
+		//remove quotes
 		this.comment1 = comment1;
 	}
 
@@ -197,7 +199,7 @@ public class AlignmentRelation {
 	
 	@Override
 	public String toString(){
-		return "\n" + getId()+ "\n"+getConceptUri1()+"\n"+getLabel1() + "\n" + getComment1() + "\n" + getOntology2() + "\n" + getConceptUri2() + 
+		return "\n" + getId()+ "\n"+getConceptUri1()+"\n"+getLabel1() + "\n" + getComment1() + "\n" + getOntology2() + "\n" + getConceptUri2() + "\n" +
 				getLabel2() + "\n"  +getComment2() + "\n" + getRelation();
 	}
 	

@@ -1,0 +1,915 @@
+code uom weight type
+sensor
+active runway configuration
+circling area
+special navigation station status
+code altimeter type
+code wake turbulence category type
+airport ground service
+aircraft type
+code military status type
+code alternative flight state type
+code note purpose type
+mcdmcoordination actor
+position marking
+water body
+val light intensity type
+code tactical rerouting status type
+atfmdeparture slot
+code airspace type
+code rnpcapability type
+procedure
+code approach lighting icaotype
+terminal arrival area sector
+angle range type
+code aerodrome surface routing network node type
+sea
+equipment capability
+atfmbehaviour
+code equipment unavailable type
+code ssrmode type
+code road type
+code time event type
+code marking condition type
+code aerodrome collocation type
+military flight activity
+pilot in command
+code runway exit type
+code vertical structure type
+code marker beacon signal type
+apron light system
+code dmechannel type
+taxiway marking
+code oceanic clearance status type
+code international flight type
+code rule procedure title type
+altitude range type
+code pcnpavement type
+code lighting jartype
+authority for navaid equipment
+code telecom network type
+marking
+code constraint originator type
+code atfmhotspot status type
+code rnavflight capability type
+code relative direction type
+navigation area sector
+code military operations type
+deicing area
+weather condition
+entity
+code final guidance type
+val pressure type
+code non standard reason type
+taxiway contamination
+aerodrome surface routing network node
+code datalink communication capability type
+qualification
+code vertical datum type
+offset
+code logical operator type
+code radar service type
+code iataseason type
+service provider callsign
+vertical constraint
+code route designator letter type
+over point
+code acdmirregularity type
+route condition
+flow
+code communication capability type
+special navigation system
+code reason for aborting take off type
+vertical structure part
+code mlsazimuth type
+code marking style type
+code missed approach type
+code class b2transmit power capability type
+code significant point designator type
+code approach lighting system type
+code north reference type
+coordination and transfer constraint
+code safe altitude type
+time constraint
+standard level sector
+code boundary crossing type
+code procedure phase type
+aerodrome surface routing network edge
+distance vertical range type
+constraining airspace activity
+radio frequency area
+floating dock site
+code route designator suffix type
+point reference
+authority for airspace
+flight performance
+code special navigation system type
+geo temporal enabled entity
+atfmhotspot
+aircraft state
+code authority role type
+code amanhorizon type
+code passenger service type
+code reference location type
+route segment
+code level series type
+code surface condition type
+taxiway holding position marking
+alert
+code navaid purpose type
+navaid equipment monitoring
+code runway type
+code rvrreading type
+code aerial refuelling prefix type
+code location qualifier type
+seaplane landing area
+code aircraft equipment type
+code convection cell type
+time to entry boundary
+code vertical structure material type
+code aircraft stand type
+ndb
+code obscuration type
+code unit type
+aircraft stand
+land and hold short operations marking
+trajectory segment
+code iatacoordination level type
+code vasistype
+runway marking
+code radio signal type
+convection
+code fuel type
+code reason cancellation type
+flight phase efficiency
+val distance type
+code filed flight rules type
+formation component
+take off configuration
+sector design
+mlsazimuth
+holding procedure
+release
+code aircraft wingspan class type
+code target time status type
+code holding use type
+heading change
+aircraft stand configuration
+crew member
+manoeuvring area
+code aircraft avionics equipment type
+take off sequencing
+aerodrome responsibility organisation
+code segment termination type
+code separation advice reason type
+code vortype
+val altitude type
+code taxiway type
+code aerodrome type
+code aircraft airframe equipment type
+slot allocation list
+aircraft equipment
+guidance line marking
+what if context
+code airspace point position type
+service
+code flight status for count type
+code status operations type
+final leg
+final profile
+unplanned holding
+sector configuration activation
+code design standard type
+terminal arrival altitude
+airspace activation
+code airspace dependency type
+parking configuration
+service at gate
+code value contamination extent type
+code procedure distance type
+code adsbgsservice status type
+two dimensional curve type
+code uom electric current type
+code status construction type
+navigation area restriction
+flight restriction
+organisation association
+surface contamination
+taxiway light system
+obscuration
+ranked4dtrajectories
+flight envelope
+wind
+geo border
+angle use
+code atfmmeasure status type
+code oceanic reclearance reason type
+code position marking type
+precipitation
+code runway element type
+aerodrome contamination
+authority for special navigation system
+reflector
+atfmregulation
+aircraft configuration
+aerodrome protection area marking
+departure sequence
+adsbground station service configuration
+code role kind type
+val mass type
+arrival operations
+runway direction light system
+code pcnmethod type
+code vertical reference type
+instrument approach procedure
+code flight service availability type
+code minimum altitude type
+vor
+oceanic restriction
+start up
+code aerodrome surface routing network edge type
+approach distance table
+code aircraft operator type
+off block
+code civil military crossing status type
+holding use
+track direction change
+aircraft make model series
+code surveillance capability type
+atcclearance
+flight in measure
+approach altitude table
+mission
+code location to deice type
+code reason for special handling type
+aircraft acceleration
+code day type
+code service class type
+code altitude reporting capability type
+entity collection
+code particular day type
+code uom eddy dissipation rate type
+aerial refuelling
+code weather intensity type
+code approach type
+runway operational constraints
+code capacity type
+code arrival separation mode type
+engine
+val speed with boundary type
+val temperature type
+instrument landing system
+off block ready
+code uom velocity type
+navaid operational status
+code fficestatus type
+departure leg condition
+arrival leg
+final approach segment data block
+code radio emission type
+airport clearance service
+adsbground station
+volcanic activity
+code navigation area restriction type
+cloud
+code oil type
+trajectory point
+code acascapability type
+special ssrcode
+approach lighting system
+code route origin type
+code reason for departure suspension type
+auxiliary power unit
+code reflector type
+circle sector
+touch down lift off marking
+code oxygen supply type
+four dimensional point type
+code life jacket equipment type
+code route availability type
+start up sequencing
+guidance line
+code ilsback course type
+iataunique flight identifier
+marking buoy
+code transponder type
+tactical rerouting constraint
+code light source type
+code alert severity level type
+code distance indication type
+runway exit line
+object
+traffic count
+radio communication operational status
+aerodrome system
+code airport movement type
+mlselevation
+aerodrome surface routing network
+code aircraft engine number type
+code engine operation mode type
+code trajectory dialogue status type
+guidance line light system
+ssrcode
+departure clearance
+ridge
+code signal performance type
+significant point
+code alternative flight response kind type
+coordination conditions
+landing sequence
+code uom pressure type
+road
+val frequency type
+airspace reservation
+touch down lift off contamination
+airspace condition
+code flow combination role type
+airspace entry
+route portion
+runway contamination
+traffic volume activation
+usage condition
+icaoaircraft address
+code airspace reservation impact type
+emergency phase
+code guidance line type
+aircraft dimensions
+code grade separation type
+three dimensional curve type
+code mcdmcoordination approval status type
+code aircraft classification type
+engine regime
+code responsibility kind type
+code upper alpha type
+coordination and transfer
+arrival airspace entry
+designated point
+runway sequencing
+code minimum height type
+code approach prefix type
+code equipment operational type
+code iatacountry code type
+code trajectory segment type
+code aircraft landing category type
+code arresting gear engage device type
+speed change
+trajectory
+ilsglidepath
+en route delay
+code surface vehicle identification type
+date time with planning type
+code deicing status type
+code geo border type
+holding assessment
+code amanstatus type
+code basic coordination status type
+code organisation hierarchy type
+code aerodrome surface routing network edge direction type
+surveillance radar
+code usage limitation type
+code turbulence type
+obstacle placement
+code uom mass concentration type
+code trajectory point acceptance status type
+touch down lift off light system
+over arrival point
+tacan
+slot assignment history
+operator configuration
+runway protect area light system
+unit availability
+code sea state type
+flight type change
+air traffic control service
+code aerodrome traffic type
+light element
+code loading bridge type
+code slot allocation status type
+special navigation station
+code emission band type
+code friction device type
+code heading type
+initial leg
+diplomatic clearance
+code light holding position type
+phase fuel efficiency
+code regulation cause location category type
+localizer
+landing
+code taxiway element type
+code time reference type
+volcano
+code level type
+direction finder
+tropical cyclone
+code runway direction operation mode type
+code uom mass density type
+code status airport type
+code partype
+code supply distribution method type
+holding area
+ground lighting availability
+code uom force type
+val weight type
+code airport slot kind type
+aircraft stand contamination
+code uom volume concentration type
+trajectory element
+flight condition element
+runway section contamination
+flight designator
+code dmetype
+marker beacon
+code light system activation type
+code protect area section type
+code operation aerodrome type
+code validity period interpretation type
+delay apportionment
+tropopause
+code aerodrome sign applicability type
+code leg path type
+airport transit view
+wind shear
+code obstacle area type
+code special height value type
+partial delay apportionment
+radio communication channel
+online contact
+code runway protection area type
+code significant weather qualifier type
+standard instrument departure
+code airspace activity type
+route or procedure change
+code uom acceleration type
+code aviation standards type
+adsbground station status
+code uom temperature type
+code standby power type
+atfmmeasure
+code course type
+code uom luminance intensity density type
+obstacle assessment area
+approach leg
+aerospace manufacturer
+code ctastatus type
+aircraft identification
+code aircraft attitude type
+code taatype
+code uom power type
+wind layer
+atfmdeparture slot improvement proposal
+code type of taxi route type
+convection cell
+bridge side
+aircraft
+departure leg
+flight crew application and approval
+aerodrome collocation
+code flight data kind type
+equipment unavailable adjustment
+unit dependency
+departure suspension
+controlled time over
+aerodrome set
+bridge
+code flight origin type
+flight configuration
+navaid component
+code surface preparation type
+code holding side type
+special date
+code procedure availability type
+separation minima
+runway mix sequence
+ground light system
+radar equipment
+code organisation type
+code work area type
+non movement area
+survival equipment
+code trajectory element type
+transfer data
+mcdmcoordination
+taxiway configuration
+code air to air engagement type
+aeroplane configuration
+standard instrument arrival
+code conditional route type
+code helicopter performance type
+stand marking
+acdmirregularity
+flight routing element
+code survival equipment type
+aircraft ground service
+flight rules change
+code precipitation type
+flight restriction route
+occupancy traffic monitoring value
+temporal enabled entity
+code cloud type
+gate
+code gas type
+code height reference type
+code rule procedure type
+authority for aerial refuelling
+code vertical structure marking type
+mcdmcoordination user category involvement
+code icaonationality letters type
+code mcdmcoordination status type
+organisation
+radio navigation aid
+authority for special navigation station
+code flight ready status type
+code departure clearance status type
+code uom frequency type
+trajectory constraint
+procedure availability
+code planning status type
+code navaid service type
+code surface composition type
+take off sequence
+code aerodrome surface routing network edge geometry derivation method type
+code instruction to aircraft type
+code stand service type
+aircraft category
+missed approach procedure
+passenger service
+aeronautical ground light
+code mode stype
+code speed reference type
+aircraft speed
+nitrogen supply
+taxi route
+taxiway
+code integrity level ilstype
+code time event combination type
+timesheet
+code tacanchannel type
+ground handling
+code service atfmtype
+code wake vortex classification type
+capability
+two dimensional point type
+runway element
+runway visual range
+apron area usage
+code buoy type
+code bearing type
+code uom mass type
+manoeuvring area usage
+code flight restriction type
+in block
+level constraint
+aircraft altitude
+code rvrtendency type
+taxiway holding position light system
+code runway marking type
+angle indication
+code uom particle content type
+code route type
+aircraft avionics
+aerodrome hot spot
+code approval type
+code airspace aggregation type
+code apron element type
+code constraint status type
+code apron section type
+code altitude adjustment type
+code nitrogen supply type
+radio navigation service
+work area
+code minima final approach path type
+code aircraft performance status type
+precision approach radar
+aircraft direction
+code uom solid angle type
+touch down lift off safe area
+vertical structure
+arresting gear
+standard level table
+code emergency phase type
+aerodrome availability
+radar system
+apron area availability
+code atcreporting type
+code communication direction type
+secondary surveillance radar
+code icaocertification type
+code mlschannel type
+arrival management horizon
+arrival management advisory
+runway mode
+terminal
+reclearance in flight
+traffic separation service
+code separation advice type
+code trajectory point type
+runway blast pad
+val hex type
+runway direction
+code atfmhotspot severity type
+code aircraft type
+code ground lighting type
+state
+flight level change
+aerodrome
+code marking pattern type
+code trajectory type
+surface contamination layer
+code safety mitigation advice type
+code arc direction type
+rules procedures
+deicing
+flight phase
+weather phenomenon
+code airspace classification type
+code authority type
+object with schedule
+deicing area marking
+airspace layer class
+code status airspace type
+lateral constraint
+volcanic ash cloud
+manufacturer configuration
+code route segment path type
+revision times
+missed approach leg
+code value interpretation type
+code constraint category type
+arrival pair
+aerodrome protection area
+segment leg
+code tlofsection type
+code position in ilstype
+arrival feeder leg
+code direction turn type
+touch down lift off
+code airspace reservation phase type
+code pilot controlled lighting type
+altimeter source status
+runway declared distance
+val vertical distance type
+movement description
+dme
+code navigation area type
+sector configuration
+code aircraft ground service type
+procedure dme
+runway condition
+three dimensional point type
+code route designator prefix type
+icing
+apron contamination
+code uom ratio type
+code aircraft survival equipment type
+code bridge drop side type
+aerodrome condition
+code aircraft flight status type
+start up clearance
+code airport cdmactor type
+code uom depth change rate type
+code count calculation type
+code ssrcategory type
+code operation manoeuvring area type
+regulation rate
+speed range type
+identifier type
+rate of climb or descent change
+capacity
+code aircraft capability type
+code approach equipment additional type
+direct route
+code uom area type
+code contamination type
+code obstacle assessment surface type
+code taxiway section type
+what if flight
+navigation area
+airspace
+code apron service type
+distance indication
+code tactical rerouting constraint type
+aircraft capability
+code fire fighting type
+civil military crossing
+military authority
+code mcdmcoordination level type
+code light bulb type
+light activation
+pilot controlled lighting
+service at stand
+work area activity
+aerial refuelling anchor
+tactical rerouting proposal
+val acceleration type
+code status navaid type
+separation mode
+code procedure coding standard type
+taxiway element
+code ssrcode status type
+code pcnsubgrade type
+code aerial refuelling type
+val concentration type
+contact information
+approach timing table
+delta emission
+speed constraint
+code atfmmeasure type
+turbulence
+code facility ranking type
+ground traffic control service
+atcblind spot
+longitudinal separation minima
+navaid equipment distance
+code comparison type
+final arrival safety mitigation advice
+runway
+service at apron
+code departure suspension status type
+reference location
+intermediate leg
+code ndbusage type
+code regulation cause type
+code runway section type
+code air traffic type
+oxygen supply
+traffic volume
+airport supplies service
+code flight rules type
+service operational status
+minima
+approach condition
+code airport warning type
+departure operations
+code communication mode type
+search and rescue service
+code cloud amount type
+ltofuel flow index
+code uom luminous intensity type
+code friction estimate type
+microwave landing system
+postal address
+code course quality ilstype
+code instrument approach category type
+ltoemissions index
+flight condition circumstance
+surveillance ground station
+aviation condition
+taxi out clearance
+code nas role type
+oil
+airport slot
+information service
+aircraft colour and marking
+code lahsomarking type
+airspace volume dependency
+code point usage type
+code checkpoint category type
+code mcdmcoordination actor role type
+code uom length type
+time range type
+code segment path type
+code aerodrome system type
+code arresting gear energy absorb type
+aerodrome terrain
+code obstruction id surface zone type
+code slot improvement proposal status type
+code constraint handling type
+traffic volume linked flow
+code terrain awareness and ground proximity alerting capability
+vehicle
+route
+code weather phenomenon type
+manoeuvring area availability
+adsbground station service
+aircraft operator
+airspace volume
+city
+code light intensity type
+visual glide slope indicator
+code change indicator type
+code special navigation station type
+boarding
+code declared distance type
+runway protect area
+code alert activation status type
+code aircraft engine type
+code emergency status type
+code status service type
+code reference role type
+val velocity type
+code uom energy flux type
+code relative position type
+aircraft performance
+code direction type
+altitude adjustment
+taxiway holding position
+apron
+code uom particle flux type
+at node
+val rate of turn type
+code target trajectory change report capability type
+oceanic clearance
+movement area
+unit
+code tactical rerouting reason type
+aerial refuelling track
+time to point boundary
+equipment unavailable adjustment column
+code separation from lead indicator type
+traffic volume set
+code release indication type
+route availability
+flight restriction level
+val altitude with boundary type
+passenger loading bridge
+matter emission
+atfmregulation slot
+circling restriction
+procedure transition
+code alert trigger type
+code uom volume type
+facility for handicapped person service
+code route navigation type
+code wind characteristic type
+airframe equipment
+val speed type
+code altitude use type
+code air traffic service type
+code compass point type
+seaplane ramp site
+duration with planning type
+fuel
+telephone contact
+code equipment status type
+geo enabled entity
+code particular matter type
+code radio frequency area type
+code flight type
+code noise certification type
+fire fighting service
+horizontal visibility
+code flight crew qualification type
+code intensity stand by type
+radar component
+code taxi route status type
+taxi in clearance
+airspace exit
+surface characteristics
+code coordination reason type
+code service information type
+code tactical irerouting proposal status type
+two dimensional surface type
+light status
+code pcntyre pressure type
+code navigation capability type
+code tactical rerouting application type
+code coordination and transfer status type
+sea condition
+supplementary rate
+code unit dependency type
+standard level column
+flight
+code taxi route mode type
+route dme
+apron marking
+code level table designator type
+final arrival separation advice
+altimeter source
+aerodrome usage
+deicing group
+code service sartype
+apron element
+code visual docking guidance type
+code uom plane angle type
+code special ssrcode type
+flow element
+flight condition combination
+flight capability
+code uom time type
+landing sequencing
+code colour type
+code military activity type
+code convection cell top variation type
+code flight phase type
+obstruction
+code instrument runway type
+airspace geometry component
+safe altitude area sector
+air traffic management service
+marking element
+take off
+three dimensional surface type
+tactical rerouting
+taxiway intersection marking
+simplified directional facility
+code military training type
+contour
+runway configuration
+aerodrome sign
+pre departure sequence
+airspace layer
+code holding usage type
+safe altitude area
+obstacle area
+emission factor

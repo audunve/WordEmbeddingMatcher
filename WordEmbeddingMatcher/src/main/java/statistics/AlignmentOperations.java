@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URI;
 
+import org.semanticweb.owl.align.Alignment;
 import org.semanticweb.owl.align.AlignmentException;
 import org.semanticweb.owl.align.AlignmentVisitor;
 import org.semanticweb.owl.align.Cell;
@@ -53,11 +54,13 @@ public class AlignmentOperations {
 	 * @return a BasicAlignment with entities in the correct order
 	 * @throws AlignmentException
 	 */
-	public static URIAlignment fixEntityOrder (BasicAlignment inputAlignment) throws AlignmentException {
+	public static BasicAlignment fixEntityOrder (BasicAlignment inputAlignment) throws AlignmentException {
 		URIAlignment newReferenceAlignment = new URIAlignment();
 		
 		URI onto1URI = inputAlignment.getOntology1URI();
 		URI onto2URI = inputAlignment.getOntology2URI();
+		
+		System.out.println("URIS: " + onto1URI + " - " + onto2URI);
 		
 		URI entity1 = null;
 		URI entity2 = null;
@@ -67,7 +70,10 @@ public class AlignmentOperations {
 		//need to initialise the alignment with ontology URIs and the type of relation (e.g. A5AlgebraRelation) otherwise exceptions are thrown
 		newReferenceAlignment.init( onto1URI, onto2URI, A5AlgebraRelation.class, BasicConfidence.class );
 		
+		System.out.println("URIS: " + onto1URI + " - " + onto2URI);
+		
 		for (Cell c : inputAlignment) {
+
 			if (c.getObject1AsURI().toString().contains(onto1URI.toString())) {
 			entity1 = c.getObject1AsURI();
 			entity2 = c.getObject2AsURI();

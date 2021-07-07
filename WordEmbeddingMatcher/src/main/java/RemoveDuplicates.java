@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Remove duplicate lines from a text file.
  * @author audunvennesland
  * 23. mai 2017 
  */

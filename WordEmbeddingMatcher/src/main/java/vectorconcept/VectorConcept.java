@@ -21,7 +21,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import fr.inrialpes.exmo.ontosim.vector.CosineVM;
 import misc.Cosine;
 import misc.MathUtils;
-import misc.StringUtils;
+import misc.StringUtilities;
 
 /**
  * @author audunvennesland
@@ -258,13 +258,13 @@ public class VectorConcept {
 		for (int i = 0; i < filesInDir.length; i++) {
 			for (int j = i+1; j < filesInDir.length; j++) {
 				if (filesInDir[i].isFile() && filesInDir[j].isFile() && i != j) {
-					System.out.println("\n*****Computing cosine for " + StringUtils.stripPath(filesInDir[i].toString()) + " and " + StringUtils.stripPath(filesInDir[j].toString()) + " *****");
+					System.out.println("\n*****Computing cosine for " + StringUtilities.stripPath(filesInDir[i].toString()) + " and " + StringUtilities.stripPath(filesInDir[j].toString()) + " *****");
 					
 					Set<VectorConcept> vc1 = populate(filesInDir[i]);
 					Set<VectorConcept> vc2 = populate(filesInDir[j]);
 					
-					System.out.println("Number of vector concepts for " + StringUtils.stripPath(filesInDir[i].toString()) + " " + vc1.size());
-					System.out.println("Number of vector concepts for " + StringUtils.stripPath(filesInDir[j].toString()) + " " + vc2.size());
+					System.out.println("Number of vector concepts for " + StringUtilities.stripPath(filesInDir[i].toString()) + " " + vc1.size());
+					System.out.println("Number of vector concepts for " + StringUtilities.stripPath(filesInDir[j].toString()) + " " + vc2.size());
 					
 					Map<String, Double> rankedLabelMap = new HashMap<String, Double>();
 					Map<String, Double> rankedGlobalMap = new HashMap<String, Double>();
@@ -323,13 +323,13 @@ public static void printGlobalSim(File vectorFileDir, double threshold) throws F
 		for (int i = 0; i < filesInDir.length; i++) {
 			for (int j = i+1; j < filesInDir.length; j++) {
 				if (filesInDir[i].isFile() && filesInDir[j].isFile() && i != j) {
-					System.out.println("\n*****Computing cosine for " + StringUtils.stripPath(filesInDir[i].toString()) + " and " + StringUtils.stripPath(filesInDir[j].toString()) + " *****");
+					System.out.println("\n*****Computing cosine for " + StringUtilities.stripPath(filesInDir[i].toString()) + " and " + StringUtilities.stripPath(filesInDir[j].toString()) + " *****");
 					
 					Set<VectorConcept> vc1 = populate(filesInDir[i]);
 					Set<VectorConcept> vc2 = populate(filesInDir[j]);
 					
-					System.out.println("Number of vector concepts for " + StringUtils.stripPath(filesInDir[i].toString()) + " " + vc1.size());
-					System.out.println("Number of vector concepts for " + StringUtils.stripPath(filesInDir[j].toString()) + " " + vc2.size());
+					System.out.println("Number of vector concepts for " + StringUtilities.stripPath(filesInDir[i].toString()) + " " + vc1.size());
+					System.out.println("Number of vector concepts for " + StringUtilities.stripPath(filesInDir[j].toString()) + " " + vc2.size());
 					
 					Map<String, Double> rankedMap = new HashMap<String, Double>();
 					

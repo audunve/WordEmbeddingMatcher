@@ -1,4 +1,9 @@
 package misc;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,13 +26,13 @@ public class StopWords {
 
 	/**
 	 * @param args
+	 * @throws IOException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		
+		String string = readFile("./files/manusquare/manusquare_wikipedia_trained.txt", StandardCharsets.UTF_8);
 
-		String s="I love this phone, its super fast and there's so" +
-				" much new and cool things with jelly bean....but of recently I've seen some bugs.";
-
-		String output = removeStopWords(s);
+		String output = removeStopWords(string);
 
 		System.out.println(output);
 
@@ -63,6 +68,13 @@ public class StopWords {
 
 		return output = sb.toString();
 	}
+	
+	private static String readFile(String path, Charset encoding) 
+			  throws IOException 
+			{
+			  byte[] encoded = Files.readAllBytes(Paths.get(path));
+			  return new String(encoded, encoding);
+			}
 
 
 }

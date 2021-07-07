@@ -19,7 +19,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
 /**
- * 
+ * Retrieves the subclasses for each entity in an ontology and returns a Map where the entity name is key and the set of associated subclasses is value.
  * @author audunvennesland
  * 26. nov. 2017 
  */
@@ -48,7 +48,7 @@ public class Subclasses {
 
 			Map<String, Set<String>> classesAndSubclasses = getSubclasses(onto1);
 
-			System.out.println("\n***** Printing classes and subclasses for " + misc.StringUtils.stripOntologyName(filesInDir[i].getName()) + " *****");
+			System.out.println("\n***** Printing classes and subclasses for " + misc.StringUtilities.stripOntologyName(filesInDir[i].getName()) + " *****");
 
 			for (Entry<String, Set<String>> e : classesAndSubclasses.entrySet()) {
 

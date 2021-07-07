@@ -19,7 +19,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
 /**
- * 
+ * Retrieves the superclass for each entity in an ontology and returns a Map where the entity name is key and the associated superclass is value.
  * @author audunvennesland
  * 26. nov. 2017 
  */
@@ -48,7 +48,7 @@ public class Superclasses {
 
 			Map<String, Set<String>> classesAndSuperclasses = getSuperclasses(onto1);
 
-			System.out.println("\n***** Printing classes and superclasses for " + misc.StringUtils.stripOntologyName(filesInDir[i].getName()) + " *****");
+			System.out.println("\n***** Printing classes and superclasses for " + misc.StringUtilities.stripOntologyName(filesInDir[i].getName()) + " *****");
 
 			for (Entry<String, Set<String>> e : classesAndSuperclasses.entrySet()) {
 
@@ -64,9 +64,9 @@ public class Superclasses {
 	}
 
 	/**
-	 * Retrieves the subclasses for each entity in an ontology and returns a Map where the entity name is key and the set of associated subclasses is value
+	 * Retrieves the superclasses for each entity in an ontology and returns a Map where the entity name is key and the set of associated superclasses is value
 	 * @param onto the input OWLOntology
-	 * @return Map<String, Set<String> where the entity name is key and the set of associated subclasses is value
+	 * @return Map<String, Set<String> where the entity name is key and the set of associated superclasses is value
 	 */
 	public static Map<String, Set<String>> getSuperclasses(OWLOntology onto) {
 

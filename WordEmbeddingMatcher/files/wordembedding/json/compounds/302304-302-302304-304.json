@@ -1,0 +1,482 @@
+[
+  {
+    "x": {
+      "comment": ". ",
+      "label": "published",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Published",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 1,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "film / movie / motion picture . ",
+      "label": "motionpicture",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#MotionPicture",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 2,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "master ' s phd thesis . ",
+      "label": "academic",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Academic",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 3,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "mastersthesis",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#MastersThesis",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "thesis ( either master phd ). ",
+      "label": "thesis",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Thesis",
+      "ontology": "302"
+    },
+    "id": 4,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "book single entity , opposed collection . ",
+      "label": "monography",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Monography",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "book",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Book",
+      "ontology": "304"
+    },
+    "id": 5,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "chapter",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Chapter",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 6,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "inproceedings",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InProceedings",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "part something ( either book proceedings ). ",
+      "label": "part",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Part",
+      "ontology": "302"
+    },
+    "id": 7,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "inproceedings",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InProceedings",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "article conference proceedings . ",
+      "label": "inproceedings",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#InProceedings",
+      "ontology": "302"
+    },
+    "id": 8,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "person",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Person",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "person . ",
+      "label": "person",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Person",
+      "ontology": "302"
+    },
+    "id": 9,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "publisher . ",
+      "label": "publisher",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Publisher",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "person",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Person",
+      "ontology": "304"
+    },
+    "id": 10,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "work may composed several parts chapter . may monography , collection proceedings . ",
+      "label": "composite",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Composite",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 11,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Entry",
+      "ontology": "302"
+    },
+    "id": 12,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "book collection texts articles . ",
+      "label": "collection",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Collection",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "book",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Book",
+      "ontology": "304"
+    },
+    "id": 13,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "proceedings",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Proceedings",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "work may composed several parts chapter . may monography , collection proceedings . ",
+      "label": "composite",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Composite",
+      "ontology": "302"
+    },
+    "id": 14,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "proceedings",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Proceedings",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "proceedings may implicitly defined inproceedings . ",
+      "label": "proceedings",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Proceedings",
+      "ontology": "302"
+    },
+    "id": 15,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "misc",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Misc",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "use type when nothing else fits . ",
+      "label": "misc",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Misc",
+      "ontology": "302"
+    },
+    "id": 16,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "misc",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Misc",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "302"
+    },
+    "id": 17,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part something ( either book proceedings ). ",
+      "label": "part",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Part",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 18,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "techreport",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#TechReport",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "302"
+    },
+    "id": 19,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "inbook",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InBook",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": " ",
+      "label": "chapter",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Chapter",
+      "ontology": "302"
+    },
+    "id": 20,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "article",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Article",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "part something ( either book proceedings ). ",
+      "label": "part",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Part",
+      "ontology": "302"
+    },
+    "id": 21,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "article",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Article",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "article from journal magazine . ",
+      "label": "article",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Article",
+      "ontology": "302"
+    },
+    "id": 22,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "article",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Article",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": ". ",
+      "label": "published",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Published",
+      "ontology": "302"
+    },
+    "id": 23,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Entry",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "resource",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Resource",
+      "ontology": "304"
+    },
+    "id": 24,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "incollection",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#InCollection",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": " ",
+      "label": "chapter",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Chapter",
+      "ontology": "302"
+    },
+    "id": 25,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "book",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Book",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "work may composed several parts chapter . may monography , collection proceedings . ",
+      "label": "composite",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Composite",
+      "ontology": "302"
+    },
+    "id": 26,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "document informally published published . ",
+      "label": "informal",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 27,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "softcopy",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#SoftCopy",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Entry",
+      "ontology": "302"
+    },
+    "id": 28,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "journal . ",
+      "label": "journal",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Journal",
+      "ontology": "302"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#Publication",
+      "ontology": "304"
+    },
+    "id": 29,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "phdthesis",
+      "URI": "http://ebiquity.umbc.edu/v2.1/ontology/publication.owl#PhdThesis",
+      "ontology": "304"
+    },
+    "y": {
+      "comment": "thesis ( either master phd ). ",
+      "label": "thesis",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Thesis",
+      "ontology": "302"
+    },
+    "id": 30,
+    "relation": "<"
+  }
+]

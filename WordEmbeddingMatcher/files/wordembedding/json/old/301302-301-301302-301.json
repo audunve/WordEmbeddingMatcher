@@ -1,0 +1,434 @@
+[
+  {
+    "x": {
+      "comment": "document having author title, formally published. ",
+      "label": "unpublished",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Unpublished",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document having author title, formally published. ",
+      "label": "unpublished",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Unpublished",
+      "ontology": "301"
+    },
+    "id": 1,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "document having author title, formally published. ",
+      "label": "unpublished",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Unpublished",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 2,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book having its own title. ",
+      "label": "incollection",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 3,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book having its own title. ",
+      "label": "incollection",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "part book having its own title. ",
+      "label": "incollection",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection",
+      "ontology": "301"
+    },
+    "id": 4,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "article conference proceedings. ",
+      "label": "inproceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "article conference proceedings. ",
+      "label": "inproceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings",
+      "ontology": "301"
+    },
+    "id": 5,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "article conference proceedings. ",
+      "label": "inproceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inproceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 6,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "article from journal magazine. ",
+      "label": "article",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "article from journal magazine. ",
+      "label": "article",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "id": 7,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "work printed bound, without named publisher sponsoring institution. ",
+      "label": "booklet",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "work printed bound, without named publisher sponsoring institution. ",
+      "label": "booklet",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet",
+      "ontology": "301"
+    },
+    "id": 8,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "book explicit publisher. ",
+      "label": "book",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "book explicit publisher. ",
+      "label": "book",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "301"
+    },
+    "id": 9,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "book explicit publisher. ",
+      "label": "book",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 10,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 11,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "Use type when nothing else fits. ",
+      "label": "misc",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 12,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "Use type when nothing else fits. ",
+      "label": "misc",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Use type when nothing else fits. ",
+      "label": "misc",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "id": 13,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "PhD thesis. ",
+      "label": "phdthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 14,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "PhD thesis. ",
+      "label": "phdthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "PhD thesis. ",
+      "label": "phdthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis",
+      "ontology": "301"
+    },
+    "id": 15,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "Technical documentation. ",
+      "label": "manual",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Manual",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Technical documentation. ",
+      "label": "manual",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Manual",
+      "ontology": "301"
+    },
+    "id": 16,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "report published school other institution, usually numbered within series. ",
+      "label": "techreport",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 17,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "report published school other institution, usually numbered within series. ",
+      "label": "techreport",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "report published school other institution, usually numbered within series. ",
+      "label": "techreport",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport",
+      "ontology": "301"
+    },
+    "id": 18,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "same INPROCEEDINGS, included Scribe compatibility. ",
+      "label": "conference",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Conference",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "same INPROCEEDINGS, included Scribe compatibility. ",
+      "label": "conference",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Conference",
+      "ontology": "301"
+    },
+    "id": 19,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "same INPROCEEDINGS, included Scribe compatibility. ",
+      "label": "conference",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Conference",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 20,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
+      "label": "inbook",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 21,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
+      "label": "inbook",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
+      "label": "inbook",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook",
+      "ontology": "301"
+    },
+    "id": 22,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "Master's thesis. ",
+      "label": "mastersthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Mastersthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Master's thesis. ",
+      "label": "mastersthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Mastersthesis",
+      "ontology": "301"
+    },
+    "id": 23,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "Master's thesis. ",
+      "label": "mastersthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Mastersthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 24,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "proceedings conference. ",
+      "label": "proceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "proceedings conference. ",
+      "label": "proceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "id": 25,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "proceedings conference. ",
+      "label": "proceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "Base class all entries ",
+      "label": "entry",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Entry",
+      "ontology": "301"
+    },
+    "id": 26,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "journal (a periodical dedicated particular subject) "he reads medical journals" ",
+      "label": "journal",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Journal",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "journal (a periodical dedicated particular subject) "he reads medical journals" ",
+      "label": "journal",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Journal",
+      "ontology": "301"
+    },
+    "id": 27,
+    "relation": "="
+  }
+]

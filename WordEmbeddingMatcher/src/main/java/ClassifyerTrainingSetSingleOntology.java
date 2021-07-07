@@ -10,7 +10,7 @@ import org.semanticweb.owl.align.Cell;
 import fr.inrialpes.exmo.align.impl.BasicAlignment;
 import fr.inrialpes.exmo.align.impl.URIAlignment;
 import fr.inrialpes.exmo.align.parser.AlignmentParser;
-import misc.StringUtils;
+import misc.StringUtilities;
 import vectorconcept.VectorConcept;
 
 /**
@@ -54,8 +54,8 @@ public class ClassifyerTrainingSetSingleOntology {
 			concept2Uri = c.getObject2AsURI().toString();
 			
 			
-			label1Name = StringUtils.getString(c.getObject1AsURI().toString()).toLowerCase();
-			label2Name = StringUtils.getString(c.getObject2AsURI().toString()).toLowerCase();
+			label1Name = StringUtilities.getString(c.getObject1AsURI().toString()).toLowerCase();
+			label2Name = StringUtilities.getString(c.getObject2AsURI().toString()).toLowerCase();
 			
 			//get vectors for label 1
 			for (VectorConcept vc301 : vc301Set) {

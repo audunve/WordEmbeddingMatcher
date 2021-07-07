@@ -1,0 +1,157 @@
+ground delay program tmi
+airport data
+relative fix
+fix flow
+planned flight route
+nrsfix
+airspace route segment
+weather condition
+atcscc
+airport route
+delay model
+datatype property
+aircraft subsystem
+navigation path
+electrical power system
+frdfix
+actual flight route
+common route
+radial route
+region3d
+tracon
+gate
+sub sequence
+aircraft wake category
+usairport
+popup factor container
+re route tmi
+meteorological condition
+operational runway
+crew member
+navigation fix
+aviation service provider
+atct
+deicing queue
+sidstarroute
+airport fix
+float parameter
+traffic management initiative
+flight
+sky condition
+artcctier
+cloud layer profile
+metarreport
+airport spec
+region2d
+integer parameter
+airport infrastructure component
+sidstar
+navigation element
+geographic region
+location
+terminal
+artcc
+flight plan segment
+air carrier
+sid
+met condition
+navaid fix
+unit assembly
+sector
+victor route
+rnavroute
+deicing truck
+intersection fix
+nashour
+tafreport
+aircraft model
+sector flow
+circular region
+aircraft communication system
+taxiway
+point location
+visibility condition
+absolute fix
+airport
+deicing pad
+jet route
+shear sided polygonal volume
+stand alone weather station
+airspace route
+navigation sub path
+aviation industry manufacturer
+non conusairport
+navigation aid
+popup factor
+aircraft
+polygonal2dregion
+thing
+numeric parameter container
+refueling truck
+polygon boundary
+vorfix
+airspace flow program tmi
+sequenced item
+aircraft flow
+aircraft type
+physical runway
+aircraft navigation system
+canadian airport
+surface wind condition
+sidstartraverse
+aspmmeteorological condition
+program arrival rate
+cloud layer
+re route segment
+runway status data
+gpsfix
+nasfacility
+sequence
+time interval
+witiproperty
+airspace layer
+transition route
+aircraft weight class
+program arrival rate sequence
+lat lon fix
+engineered system
+government aviation service provider
+star
+airport service vehicle
+meter fix
+popup factor sequence
+license document
+miles in trail tmi
+program arrival rate container
+international airport
+metarreporting station
+ramp tower
+aircraft engine manufacturer
+airframe manufacturer
+tacanfix
+ball bearing
+ground stop tmi
+airspace infrastructure component
+decomposable system
+nav element container
+nasday
+ndbfix
+sector capacity
+engine type
+troute
+taxipath
+vorroute
+qroute
+runway visible range measurement
+conusairport
+tafmeteorological condition
+tfmcontrol element
+flight spec
+aircraft capacity
+interval data
+federal airway
+aircraft engine
+fix capacity
+aircraft flow capacity
+aircraft track point
+numeric parameter

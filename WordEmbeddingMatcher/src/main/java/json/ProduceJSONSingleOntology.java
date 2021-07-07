@@ -16,7 +16,7 @@ import org.semanticweb.owl.align.AlignmentException;
 
 import fr.inrialpes.exmo.align.impl.BasicAlignment;
 import fr.inrialpes.exmo.align.parser.AlignmentParser;
-import misc.StringUtils;
+import misc.StringUtilities;
 
 import org.semanticweb.owl.align.Cell;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -53,6 +53,8 @@ public class ProduceJSONSingleOntology {
 	static OWLDataFactory factory = manager.getOWLDataFactory();
 
 	public static void main(String[] args) throws AlignmentException, OWLOntologyCreationException, IOException {
+		
+		String ontoID = "304";
 
 		String ontology1 = null;
 		String ontology2 = null;
@@ -62,14 +64,17 @@ public class ProduceJSONSingleOntology {
 		String label2Name = null;
 
 		//import reference alignment file
-		File refalignFile = new File("./files/wordembedding/refencealignments/303303/303303-refalign.rdf");
+		File refalignFile = new File("./files/wordembedding/referencealignments/"+ontoID+ontoID+"/"+ontoID+ontoID+"-refalign.rdf");
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment refalign = (BasicAlignment)parser.parse(refalignFile.toURI().toString());
 
 		//import the ontologies in the reference alignment
 		//set the same ontology file for both File instances
-		File ontoFile1 = new File("./files/wordembedding/allontologies/301303-303.rdf");
-		File ontoFile2 = new File("./files/wordembedding/allontologies/301303-303.rdf");
+//		File ontoFile1 = new File("./files/wordembedding/allontologies/"+ontoID+"304-"+ontoID+".rdf");
+//		File ontoFile2 = new File("./files/wordembedding/allontologies/"+ontoID+"304-"+ontoID+".rdf");
+		
+		File ontoFile1 = new File("./files/wordembedding/allontologies/301304-304.rdf");
+		File ontoFile2 = new File("./files/wordembedding/allontologies/301304-304.rdf");
 
 		//parse the ontologies to OWL
 		OWLOntology onto1 = manager.loadOntologyFromOntologyDocument(ontoFile1);
@@ -104,7 +109,7 @@ public class ProduceJSONSingleOntology {
 		int id = 1;
 		
 		//the output JSON file
-		File outPutFile = new File("./files/wordembedding/json/" + StringUtils.stripOntologyName(ontoFile1.getName()) + "-" + StringUtils.stripOntologyName(ontoFile2.getName()) + ".json");
+		File outPutFile = new File("./files/wordembedding/json/compounds/" + ontoID + "-" + ontoID + ".json");
 
 		PrintWriter pw = new PrintWriter(outPutFile);
 		
@@ -117,15 +122,15 @@ public class ProduceJSONSingleOntology {
 
 			//since we are only using a single ontology in this case, just set the ontology name for both
 			//ontology 1 and ontology 2
-			ontology1 = "303";
-			ontology2 = "303";
+			ontology1 = ontoID;
+			ontology2 = ontoID;
 			
 			concept1Uri = c.getObject1AsURI().toString();
 			concept2Uri = c.getObject2AsURI().toString();
 			
 			ar.setRelation(c.getRelation().getRelation());
-			label1Name = StringUtils.getString(c.getObject1AsURI().toString()).toLowerCase();
-			label2Name = StringUtils.getString(c.getObject2AsURI().toString()).toLowerCase();
+			label1Name = StringUtilities.getString(c.getObject1AsURI().toString());
+			label2Name = StringUtilities.getString(c.getObject2AsURI().toString());
 
 			ar.setComment1(mergedCommentMap.get(concept1Uri));
 			ar.setComment2(mergedCommentMap.get(concept2Uri));
@@ -142,13 +147,13 @@ public class ProduceJSONSingleOntology {
 			JSONObject cell1 = new JSONObject();
 			cell1.put("ontology", ar.getOntology1());	
 			cell1.put("URI", ar.getConceptUri1());
-			cell1.put("label", ar.getLabel1());	
-			cell1.put("comment", ar.getComment1());
+			cell1.put("label", StringUtilities.normalizeStringCompounds(ar.getLabel1()));	
+			cell1.put("comment", StringUtilities.normalizeStringCompounds(ar.getComment1()));
 				
 
 			JSONObject cell2 = new JSONObject();
-			cell2.put("comment", ar.getComment2());
-			cell2.put("label", ar.getLabel2());
+			cell2.put("comment", StringUtilities.normalizeStringCompounds(ar.getComment2()));
+			cell2.put("label", StringUtilities.normalizeStringCompounds(ar.getLabel2()));
 			cell2.put("URI", ar.getConceptUri2());
 			cell2.put("ontology", ar.getOntology2());
 
@@ -198,7 +203,7 @@ public class ProduceJSONSingleOntology {
 			OWLAnnotationValue value = a.getValue();
 			if(value instanceof OWLLiteral) {
 				comment = ((OWLLiteral) value).getLiteral().toString();
-				commentWOStopWords = StringUtils.removeStopWordsFromString(comment);
+				commentWOStopWords = StringUtilities.removeStopWordsFromString(comment);
 			}
 		}
 

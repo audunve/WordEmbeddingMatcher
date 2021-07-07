@@ -1,0 +1,354 @@
+[
+  {
+    "x": {
+      "comment": "Technical documentation. ",
+      "label": "manual",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Manual",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 1,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
+      "label": "inbook",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 2,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "work printed bound, without named publisher sponsoring institution. ",
+      "label": "booklet",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 3,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "inbook",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#InBook",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "part book, which may chapter (or section whatever) and/or range pages. ",
+      "label": "inbook",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook",
+      "ontology": "301"
+    },
+    "id": 4,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "proceedings",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Proceedings",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "proceedings conference. ",
+      "label": "proceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "id": 5,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "incollection",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#InCollection",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "part book having its own title. ",
+      "label": "incollection",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection",
+      "ontology": "301"
+    },
+    "id": 6,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "article from journal magazine. ",
+      "label": "article",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 7,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "booklet",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Booklet",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "work printed bound, without named publisher sponsoring institution. ",
+      "label": "booklet",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet",
+      "ontology": "301"
+    },
+    "id": 8,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "report published school other institution, usually numbered within series. ",
+      "label": "techreport",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "report",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Report",
+      "ontology": "303"
+    },
+    "id": 9,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "phdthesis",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#PhDThesis",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "PhD thesis. ",
+      "label": "phdthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis",
+      "ontology": "301"
+    },
+    "id": 10,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "misc",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Misc",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "Use type when nothing else fits. ",
+      "label": "misc",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "id": 11,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "journal (a periodical dedicated particular subject) "he reads medical journals" ",
+      "label": "journal",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Journal",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 12,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "book explicit publisher. ",
+      "label": "book",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 13,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "article",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Article",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "article from journal magazine. ",
+      "label": "article",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "id": 14,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "proceedings conference. ",
+      "label": "proceedings",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 15,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "PhD thesis. ",
+      "label": "phdthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "thesis",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Thesis",
+      "ontology": "303"
+    },
+    "id": 16,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book having its own title. ",
+      "label": "incollection",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 17,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "manual",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Manual",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "Technical documentation. ",
+      "label": "manual",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Manual",
+      "ontology": "301"
+    },
+    "id": 18,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "Master's thesis. ",
+      "label": "mastersthesis",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Mastersthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "thesis",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Thesis",
+      "ontology": "303"
+    },
+    "id": 19,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "Use type when nothing else fits. ",
+      "label": "misc",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "publication",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Publication",
+      "ontology": "303"
+    },
+    "id": 20,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "book",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Book",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "book explicit publisher. ",
+      "label": "book",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "301"
+    },
+    "id": 21,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": " ",
+      "label": "unpublished",
+      "URI": "http://www.aifb.uni-karlsruhe.de/ontology#Unpublished",
+      "ontology": "303"
+    },
+    "y": {
+      "comment": "document having author title, formally published. ",
+      "label": "unpublished",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Unpublished",
+      "ontology": "301"
+    },
+    "id": 22,
+    "relation": "="
+  }
+]

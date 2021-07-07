@@ -14,14 +14,10 @@ import org.semanticweb.owl.align.Alignment;
 import org.semanticweb.owl.align.AlignmentException;
 import org.semanticweb.owl.align.AlignmentProcess;
 import org.semanticweb.owl.align.AlignmentVisitor;
-import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import fr.inrialpes.exmo.align.impl.BasicAlignment;
 import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
-import misc.StringUtils;
 
 
 public class TestMatcher {
@@ -34,16 +30,19 @@ public class TestMatcher {
 		final String MATCHER = "STRING";
 
 		/*** 2. SELECT THE TWO ONTOLOGIES TO BE MATCHED ***/
-		File ontoFile1 = new File("./files/wordembedding/allontologies/303304-303.rdf");
-		File ontoFile2 = new File("./files/wordembedding/allontologies/303304-304.rdf");
+		File ontoFile1 = new File("./files/ATMONTO_AIRM/ontologies/ATMOntoCoreMerged.owl");
+		File ontoFile2 = new File("./files/ATMONTO_AIRM/ontologies/airm-mono.owl");
 		
+		/** SELECT VECTOR FILES **/		
+		String vectorFile1 = "./files/ATMONTO_AIRM/vectorfiles/ATMOntoCoreMerged.txt";
+		String vectorFile2 = "./files/ATMONTO_AIRM/vectorfiles/airm-mono.txt";
 		
 		/*** 3. SELECT THE NEO4J DATABASE FILE (FOR THE STRUCTURAL MATCHERS ONLY) ***/
 		final File dbFile = new File("/Users/audunvennesland/Documents/PhD/Development/Neo4J/biblio-bibo2");
 		
 
 		/*** INITIAL VALUES, NO NEED TO TOUCH THESE ***/
-		final double threshold = 0.9;
+		final double threshold = 0.6;
 		final String thresholdValue = removeCharAt(String.valueOf(threshold),1);	
 		
 		
@@ -65,7 +64,7 @@ public class TestMatcher {
 		switch(MATCHER) {
 
 		case "WE-GLOBAL":
-			a = new WEGlobalMatcher();
+			a = new WEGlobalMatcher(vectorFile1, vectorFile2);
 
 			a.init(ontoFile1.toURI(), ontoFile2.toURI());
 			params = new Properties();
@@ -74,7 +73,7 @@ public class TestMatcher {
 			
 			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
 
-			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "-GlobalVectors-" + thresholdValue + ".rdf";
+			alignmentFileName = "./files/ATMONTO_AIRM/alignments/" + onto1 + "-" + onto2 + "-GlobalVectors-" + thresholdValue + ".rdf";
 
 			outputAlignment = new File(alignmentFileName);
 
@@ -109,7 +108,7 @@ public class TestMatcher {
 			
 			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
 
-			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "-LabelVectors-" + thresholdValue + ".rdf";
+			alignmentFileName = "./files/ATMONTO_AIRM/alignments/" + onto1 + "-" + onto2 + "-LabelVectors-" + thresholdValue + ".rdf";
 
 			outputAlignment = new File(alignmentFileName);
 
@@ -142,7 +141,7 @@ public class TestMatcher {
 			
 			System.err.println("The a alignment contains " + a.nbCells() + " correspondences");
 
-			alignmentFileName = "./files/wordembedding/alignments/" + onto1 + "-" + onto2 + "-ISub-" + thresholdValue + ".rdf";
+			alignmentFileName = "./files/ATMONTO_AIRM/alignments/" +  onto1 + "-" + onto2 + "-ISub-" + thresholdValue + ".rdf";
 
 			outputAlignment = new File(alignmentFileName);
 

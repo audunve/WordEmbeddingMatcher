@@ -1,0 +1,354 @@
+[
+  {
+    "x": {
+      "comment": "document having author title , formally published . ",
+      "label": "unpublished ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Unpublished",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "304"
+    },
+    "id": 1,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "document having author title , formally published . ",
+      "label": "unpublished ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Unpublished",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document having author title , formally published . ",
+      "label": "unpublished ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Unpublished",
+      "ontology": "304"
+    },
+    "id": 2,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "part book having its own title . ",
+      "label": "incollection ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Incollection",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "chapter ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Chapter",
+      "ontology": "304"
+    },
+    "id": 3,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "book single entity , opposed collection . ",
+      "label": "monography ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Monography",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "book explicit publisher . ",
+      "label": "book ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "304"
+    },
+    "id": 4,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "article from journal magazine . ",
+      "label": "article ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "article from journal magazine . ",
+      "label": "article ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Article",
+      "ontology": "304"
+    },
+    "id": 5,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "article from journal magazine . ",
+      "label": "article ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": ". ",
+      "label": "published ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Published",
+      "ontology": "304"
+    },
+    "id": 6,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "article from journal magazine . ",
+      "label": "article ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Article",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "part something ( either book proceedings ). ",
+      "label": "part ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Part",
+      "ontology": "304"
+    },
+    "id": 7,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "work printed bound , without named publisher sponsoring institution . ",
+      "label": "booklet ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "304"
+    },
+    "id": 8,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "work printed bound , without named publisher sponsoring institution . ",
+      "label": "booklet ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Booklet",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "work printed bound , without named publisher sponsoring institution . ",
+      "label": "booklet ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Booklet",
+      "ontology": "304"
+    },
+    "id": 9,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "use type when nothing else fits . ",
+      "label": "misc ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "use type when nothing else fits . ",
+      "label": "misc ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Misc",
+      "ontology": "304"
+    },
+    "id": 10,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "use type when nothing else fits . ",
+      "label": "misc ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Misc",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "304"
+    },
+    "id": 11,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "report published school other institution , usually numbered within series . ",
+      "label": "tech report ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "report published school other institution , usually numbered within series . ",
+      "label": "tech report ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#TechReport",
+      "ontology": "304"
+    },
+    "id": 12,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "report published school other institution , usually numbered within series . ",
+      "label": "tech report ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#TechReport",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "304"
+    },
+    "id": 13,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "ph d thesis . ",
+      "label": "phdthesis ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Phdthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "thesis ( either master ph d ). ",
+      "label": "thesis ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Thesis",
+      "ontology": "304"
+    },
+    "id": 14,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "technical documentation . ",
+      "label": "manual ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Manual",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "document informally published published . ",
+      "label": "informal ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Informal",
+      "ontology": "304"
+    },
+    "id": 15,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "technical documentation . ",
+      "label": "manual ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Manual",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "technical documentation . ",
+      "label": "manual ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Manual",
+      "ontology": "304"
+    },
+    "id": 16,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "book collection texts articles . ",
+      "label": "collection ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Collection",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "book explicit publisher . ",
+      "label": "book ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Book",
+      "ontology": "304"
+    },
+    "id": 17,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "master ' s thesis . ",
+      "label": "mastersthesis ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Mastersthesis",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "thesis ( either master ph d ). ",
+      "label": "thesis ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Thesis",
+      "ontology": "304"
+    },
+    "id": 18,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "part book , which may chapter ( or section whatever ) and / or range pages . ",
+      "label": "inbook ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Inbook",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": " ",
+      "label": "chapter ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Chapter",
+      "ontology": "304"
+    },
+    "id": 19,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "proceedings conference . ",
+      "label": "proceedings ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "work may composed several parts chapter . may monography , collection proceedings . ",
+      "label": "composite ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Composite",
+      "ontology": "304"
+    },
+    "id": 20,
+    "relation": "<"
+  },
+  {
+    "x": {
+      "comment": "proceedings conference . ",
+      "label": "proceedings ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Proceedings",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "proceedings may implicitly defined inproceedings . ",
+      "label": "proceedings ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Proceedings",
+      "ontology": "304"
+    },
+    "id": 21,
+    "relation": "="
+  },
+  {
+    "x": {
+      "comment": "journal ( a periodical dedicated particular subject ) " he reads medical journals " ",
+      "label": "journal ",
+      "URI": "http://oaei.ontologymatching.org/2010/benchmarks/301/onto.rdf#Journal",
+      "ontology": "301"
+    },
+    "y": {
+      "comment": "journal . ",
+      "label": "journal ",
+      "URI": "http://oaei.ontologymatching.org/2009/benchmarks/304/onto.rdf#Journal",
+      "ontology": "304"
+    },
+    "id": 22,
+    "relation": "="
+  }
+]

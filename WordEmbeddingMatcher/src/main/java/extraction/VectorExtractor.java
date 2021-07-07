@@ -25,10 +25,11 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
-import misc.StringUtils;
+import misc.StringUtilities;
 import misc.MathUtils;
 
 /**
+ * Extracts VectorConcepts by retrieving vectors from a Word Embedding file according to concepts in an ontology.
  * @author audunvennesland
  * 21. sep. 2017 
  */
@@ -81,7 +82,7 @@ public class VectorExtractor {
 			OWLAnnotationValue value = a.getValue();
 			if(value instanceof OWLLiteral) {
 				comment = ((OWLLiteral) value).getLiteral().toString();
-				commentWOStopWords = StringUtils.removeStopWordsFromString(comment);
+				commentWOStopWords = StringUtilities.removeStopWordsFromString(comment);
 			}
 		}
 
@@ -152,20 +153,20 @@ public class VectorExtractor {
 	 * @param inputVectors ArrayList holding a set of input vectors
 	 * @return an average of all input vectors
 	 */
-	public static double averageVectors (ArrayList<Double> inputVectors) {
-
-		int num = inputVectors.size();
-
-		double sum = 0;
-
-		for (Double d : inputVectors) {
-			sum+=d;
-		}
-
-		double averageVectors = sum/num;
-
-		return averageVectors;
-	}
+//	public static double averageVectors (ArrayList<Double> inputVectors) {
+//
+//		int num = inputVectors.size();
+//
+//		double sum = 0;
+//
+//		for (Double d : inputVectors) {
+//			sum+=d;
+//		}
+//
+//		double averageVectors = sum/num;
+//
+//		return averageVectors;
+//	}
 
 
 
@@ -187,12 +188,15 @@ public class VectorExtractor {
 			String line = sc.nextLine();
 			String[] strings = line.split(" ");
 
+			//get the word, not the vectors
 			String word1 = strings[0];
 
+			//get the vectors and put them in an array list
 			ArrayList<Double> vec = new ArrayList<Double>();
 			for (int i = 1; i < strings.length; i++) {
 				vec.add(Double.valueOf(strings[i]));
 			}
+			//put the word and associated vectors in the vectormap
 			vectorMap.put(word1, vec);
 
 		}
@@ -216,10 +220,12 @@ public class VectorExtractor {
 		String labelVector = null;
 		String label = cls.getIRI().getFragment().toString();
 
+		//if the class name is not a compound, turn it into lowercase, 
 		if (!isCompound(label)) {
 
 			String lcLabel = label.toLowerCase();
 
+			//if the class name is in the vectormap, get its vectors
 			if (vectorMap.containsKey(lcLabel)) {
 				labelVectors = vectorMap.get(lcLabel);
 
@@ -235,6 +241,8 @@ public class VectorExtractor {
 
 			labelVector = sb.toString();
 
+			//if the class name is a compound, split the compounds, and if the vectormap contains ANY of the compounds, extract the vectors from 
+			//the compound parts and average them in order to return the vector for the compound class name
 		} else if (isCompound(label)) {
 
 			//get the compounds and check if any of them are in the vector file
@@ -303,6 +311,7 @@ public class VectorExtractor {
 
 		}
 
+		//the label vector is averaged across all compound parts that are in the vectormap
 		return labelVector;
 
 
@@ -331,7 +340,7 @@ public class VectorExtractor {
 		if (comment != null && !comment.isEmpty()) {
 
 			//create tokens from comment
-			ArrayList<String> tokens = StringUtils.tokenize(comment, true);
+			ArrayList<String> tokens = StringUtilities.tokenize(comment, true);
 
 			//put all tokens that have an associated vector in the vectorMap in allCommentVectors along with the associated vector
 			for (String s : tokens) {
@@ -509,7 +518,7 @@ public class VectorExtractor {
 		System.out.println("Enter path to vector file:");  
 		String vectorFileName = scanner.nextLine(); 
 
-		//time with extraction process starts (to present run-time after the process is completed)
+		//time with extraction process starts (to present run-time after .the process is completed)
 		final long start = System.nanoTime();
 
 		final File ontologyDir = new File(ontoFileName);
@@ -526,7 +535,7 @@ public class VectorExtractor {
 			OWLOntology onto = manager.loadOntologyFromOntologyDocument(ontoFile);
 			Set<OWLClass> classes = onto.getClassesInSignature();
 
-			PrintWriter writer = new PrintWriter("vectorOutput" + StringUtils.stripOntologyName(filesInDir[i].toString()) + ".txt");
+			PrintWriter writer = new PrintWriter("./files/manusquare/vectorOutput" + StringUtilities.stripOntologyName(filesInDir[i].toString()) + ".txt");
 
 			for (OWLClass cls : classes) {
 
